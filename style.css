@@ -152,10 +152,6 @@ nav {
         padding: 0;   /* removes ALL outer white space */
     }
 
-    nav {
-        padding: 15px 15px;
-    }
-
     /* NAV TWEAKS */
     .navi ul { 
         gap: 10px; 
@@ -163,7 +159,8 @@ nav {
     }
 
     .navi a { 
-        font-size: 14px; 
+        font-size: 14px;
+        padding: 0px 15px;
     }
 
     .darkbutton { 
