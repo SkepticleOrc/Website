@@ -218,10 +218,6 @@ nav {
         text-align: center;
     }
 
-    .navi.active{
-        display: block;
-    }
-
     /* Show menu when .active is added by JS */
     .navi.active ul {
         display: flex !important;
