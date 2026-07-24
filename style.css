@@ -166,6 +166,11 @@ nav {
         padding: 0;
     }
 
+    nav{
+        background-color: transparent;
+        padding: 0;
+    }
+
     /* Fix: prevent .navi from acting like a flex container */
     .navi {
         display: none; /* Stops layout from pushing hamburger */  
