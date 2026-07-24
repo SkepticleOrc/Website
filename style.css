@@ -160,24 +160,17 @@ nav {
 
 @media (max-width: 600px){
 
-    /* Remove outer spacing on mobile */
     html, body {
         margin: 0;
         padding: 0;
     }
 
-
-    /* Fix: prevent .navi from acting like a flex container */
-    .navi {
-        display: none; 
-    }
-
     /* Show hamburger on mobile */
     .hamburger {
-        display: block;        /* Make it visible */
-        position: absolute;    /* Float independently */
-        left: 20px;            /* Move to left side */
-        top: 15px;             /* Align vertically */
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 15px;
         z-index: 999;
         cursor: pointer;
     }
@@ -190,34 +183,23 @@ nav {
         z-index: 999;
     }
 
-    /* Hamburger bar styling (same as desktop) */
-    .hamburger span {
-        display: block;
-        width: 28px;
-        height: 3px;
-        background: white;
-        margin: 6px 0;
-        transition: 0.3s;
-    }
-
     /* Hide nav menu until hamburger is clicked */
     .navi ul { 
-        display: none !important; /* Hidden by default */
-        flex-direction: column;   /* Vertical dropdown */
+        display: none !important;
+        flex-direction: column;
         gap: 10px;
         padding: 20px;
         background: rgba(0,0,0,0.9);
-        margin-top: 60px;         /* Below hamburger */
+        margin-top: 60px;
         width: 100%;
         text-align: center;
     }
 
-    /* Show menu when .active is added by JS */
+    /* When menu is active (JS toggles .active) */
     .navi.active ul {
         display: flex !important;
     }
 
-    /* Smaller text on mobile */
     .navi a { 
         font-size: 14px;
         padding: 0px 15px;
@@ -252,7 +234,6 @@ nav {
         font-size: 0.9rem;
     }
 
-    /* General mobile scaling */
     body { padding: 0px; }
     main { margin: 0; }
     h1 { font-size: 24px; }
