@@ -152,10 +152,14 @@ nav {
         padding: 0;   /* removes ALL outer white space */
     }
 
+    nav {
+        padding: 15px 15px;
+    }
+
     /* NAV TWEAKS */
     .navi ul { 
         gap: 10px; 
-        padding: 0px 10px; 
+        padding: 10px; 
     }
 
     .navi a { 
