@@ -168,9 +168,11 @@ nav {
 
     nav{
         background-color: transparent;
+        backdrop-filter: none;     /* ← THIS removes the frosted bar */
         padding: 0;
         height: 0;
         overflow: visible;
+        border: none;              /* ← In case a border is showing */
     }
 
     /* Show hamburger on mobile */
