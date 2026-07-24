@@ -164,7 +164,7 @@ nav {
     .site-footer {
         padding: 40px 20px;         /* breathing room */
         display: flex;
-        justify-self: space-between;
+        justify-self: flex-start;
         flex-direction: column;     /* stack sections vertically */
         align-items: center;        /* center everything */
         gap: 25px;                  /* spacing between each section */
