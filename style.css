@@ -145,6 +145,11 @@ nav {
 /* Responsive overrides (ALWAYS at the bottom) */
 @media (max-width: 480px) {
 
+    html, body {
+        margin: 0;
+        padding: 0;   /* removes ALL outer white space */
+    }
+
     /* NAV TWEAKS */
     .navi ul { 
         gap: 10px; 
@@ -162,14 +167,14 @@ nav {
 
     /* FOOTER FIXES — STOP CRAMPING */
     .site-footer {
-        padding: 35px 20px;         /* breathing room */
+        border: none; /* removes any border-top */
+        margin: 0;    /* removes any leftover margin */
+        padding: 35px 20px;
         display: flex;
-        justify-self: flex-start;
-        flex-direction: column;     /* stack sections vertically */
-        align-items: center;        /* center everything */
-        gap: 25px;                  /* spacing between each section */
-        border: none;
-        margin: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 25px;
     }
 
     .site-footer h3 {
