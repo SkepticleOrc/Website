@@ -172,11 +172,12 @@ nav {
     }
 
 
-    nav{
+    /*nav{
         background-color: rgba(0, 0, 0, 1.0); /* if you want tansparent, change the 1.0 value */
-        color: #ffffff;
+        /*color: #ffffff;
     }
-    
+
+
     /* Show hamburger on mobile */
     .hamburger {
         display: block;        /* Make it visible */
