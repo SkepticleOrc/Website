@@ -162,7 +162,7 @@ nav {
 
     /* FOOTER FIXES — STOP CRAMPING */
     .site-footer {
-        padding: 40px 20px;         /* breathing room */
+        padding: 35px 20px;         /* breathing room */
         display: flex;
         justify-self: flex-start;
         flex-direction: column;     /* stack sections vertically */
