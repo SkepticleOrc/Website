@@ -196,6 +196,12 @@ nav {
         display: none;
     }
 
+
+    .navi.active {
+        display: block;
+    }
+
+
     /* Hide nav menu until hamburger is clicked */
     .navi ul { 
         display: none !important;
@@ -208,10 +214,7 @@ nav {
         text-align: center;
     }
 
-    .navi.active {
-        display: block;
-}
-
+  
     /* When menu is active (JS toggles .active) */
     .navi.active ul {
         display: flex !important;
