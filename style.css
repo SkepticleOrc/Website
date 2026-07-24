@@ -169,8 +169,8 @@ nav {
     nav {
         background-color: transparent;
         padding: 0;
-        height: 0;          /* ← collapses the nav bar */
-        /*overflow: visible;  /* ← allows hamburger + darkbutton to show */
+        height: 0; /* ← collapses the nav bar */
+        overflow: visible;  /* ← allows hamburger + darkbutton to show */
     }
 
     /* Fix: prevent .navi from acting like a flex container */
