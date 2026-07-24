@@ -161,6 +161,11 @@ nav {
 
     /* ---------------- NAV TWEAKS ---------------- */
 
+    navi {
+        display: block;
+    }
+
+
     /* Show hamburger on mobile */
     .hamburger {
         display: block;
@@ -186,6 +191,8 @@ nav {
         margin: 6px 0;
         transition: 0.3s;
     }
+
+
 
     /* Hide nav menu initially */
     .navi ul { 
