@@ -169,11 +169,9 @@ nav {
     /* Fix: prevent .navi from acting like a flex container */
     navi {
         display: block; /* Stops layout from pushing hamburger */
-    }
-
-    nav{
         padding: 40px;
     }
+
 
     /* Show hamburger on mobile */
     .hamburger {
