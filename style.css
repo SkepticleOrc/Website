@@ -166,6 +166,13 @@ nav {
         padding: 0;
     }
 
+    nav{
+        background: transparent;
+        padding: 0;
+        height: 0;
+        overflow: visible;
+    }
+
     /* Show hamburger on mobile */
     .hamburger {
         display: block;
