@@ -172,6 +172,10 @@ nav {
     }
 
 
+    nav {
+        padding: 5px 0; /* change this to whatever you want */
+    }
+
     /* Show hamburger on mobile */
     .hamburger {
         display: block;        /* Make it visible */
@@ -205,7 +209,7 @@ nav {
         display: none !important; /* Hidden by default */
         flex-direction: column;   /* Vertical dropdown */
         gap: 10px;
-        padding: 10px 0;
+        padding: 20px;
         background: rgba(0,0,0,0.9);
         margin-top: 60px;         /* Below hamburger */
         width: 100%;
