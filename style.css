@@ -168,7 +168,7 @@ nav {
 
     /* Fix: prevent .navi from acting like a flex container */
     navi {
-        display: block; /* Stops layout from pushing hamburger */  
+        display: none; /* Stops layout from pushing hamburger */  
     }
 
     /* Show hamburger on mobile */
@@ -197,10 +197,6 @@ nav {
         background: white;
         margin: 6px 0;
         transition: 0.3s;
-    }
-
-    .navi {
-        display: none; /* Stops layout from pushing hamburger */  
     }
 
     /* Hide nav menu until hamburger is clicked */
