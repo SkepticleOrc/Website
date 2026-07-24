@@ -184,6 +184,7 @@ nav {
         top: 15px;             /* Align vertically */
         z-index: 999;
         cursor: pointer;
+        padding: 10px 0;
     }
 
     /* Keep dark mode button on right */
