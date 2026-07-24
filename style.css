@@ -147,7 +147,7 @@ nav {
 
 
 /* Responsive overrides (ALWAYS at the bottom) */
-@media (max-width: 480px) {
+@media (max-width: 300px) {
 
     html, body {
         margin: 0;
