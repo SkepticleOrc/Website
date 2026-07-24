@@ -54,26 +54,6 @@ nav {
     font-size: 16px;
 }
 
-
-
-@media (max-width: 600px) {
-    .navi ul {
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .navi a {
-        font-size: 14px;
-    }
-
-    .darkbutton {
-        padding: 0 10px;
-    }
-}
-
-
-
-
 /*---------------------------------------------------------------------------------------*/
 /*This module isolates the dark mode button, enabling it to move alone.*/
 .darkbutton {
@@ -134,4 +114,34 @@ nav {
   .footer-column ul li a:hover {
     color: #fff;
     text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
+    .navi ul {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .navi a {
+        font-size: 14px;
+    }
+
+    .darkbutton {
+        padding: 0 10px;
+    }
+}
+
+/* Responsive overrides (ALWAYS at the bottom) */
+@media (max-width: 400px) {
+    /* nav tweaks */
+    .navi ul { gap: 10px; padding: 10px; }
+    .navi a { font-size: 14px; }
+    .darkbutton { padding: 0 10px; }
+
+    /* page-wide scaling */
+    body { padding: 10px; }
+    main { margin: 0; }
+    h1 { font-size: 24px; }
+    p { font-size: 16px; }
 }
