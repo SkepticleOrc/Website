@@ -41,6 +41,7 @@ nav {
     position: relative;                  /* IMPORTANT: anchors hamburger & dark button */
     width: 100%;
     backdrop-filter: blur(10px);         /* Frosted glass effect */
+    z-index: 9999;
 }
 
 /* Nav links */
