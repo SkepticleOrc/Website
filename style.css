@@ -148,7 +148,7 @@ nav {
     .navi ul { gap: 10px; padding: 10px; }
     .navi a { font-size: 14px; }
     .darkbutton { padding: 0 10px; }
-    .site-footer { padding: 0 10px; }
+    .site-footer { padding: 0 20px; }
 
     /* page-wide scaling */
     body { padding: 10px; }
