@@ -177,7 +177,7 @@ nav {
 
     /* Hide nav menu initially */
     .navi ul { 
-        display: none;                 /* hidden until burger clicked */
+        display: none !important;      /* hidden until burger clicked */
         flex-direction: column;        /* vertical menu */
         gap: 10px; 
         padding: 20px;                 /* spacing inside dropdown */
@@ -189,7 +189,7 @@ nav {
 
     /* When menu is active (JS toggles .active) */
     .navi.active ul {
-        display: flex;
+        display: flex !important;
     }
 
     .navi a { 
