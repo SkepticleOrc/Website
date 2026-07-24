@@ -84,9 +84,9 @@ nav {
 .site-footer {
     background: black;
     color: #fff;
-    padding: 40px 20px;
+    padding: 40px 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     flex-wrap: wrap;
     max-width: 100%;
@@ -162,8 +162,9 @@ nav {
 
     /* FOOTER FIXES — STOP CRAMPING */
     .site-footer {
-        padding: 25px 15px;         /* breathing room */
+        padding: 40px 20px;         /* breathing room */
         display: flex;
+        justify-self: space-between;
         flex-direction: column;     /* stack sections vertically */
         align-items: center;        /* center everything */
         gap: 25px;                  /* spacing between each section */
