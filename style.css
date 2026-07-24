@@ -169,7 +169,7 @@ nav {
     nav {
         background-color: transparent;
         padding: 0;
-        height: 100px; /* ← collapses the nav bar */
+        /*height: 100px; /* ← collapses the nav bar */
         overflow: visible;  /* ← allows hamburger + darkbutton to show */
     }
 
