@@ -36,7 +36,7 @@ nav {
     color: #ffffff;
     padding: 15px 0;
     position: absolute;
-    width: 100vw;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
 }
@@ -50,7 +50,7 @@ nav {
 /*This module removes the dots on the nav bar ul lists*/
 .navi ul {
     list-style: none;   /* Removes the dots from the nav menu */
-    padding: 1;         /* Removes the left indent */
+    padding: 0;         /* Removes the left indent */
     margin: 0;          /* Keeps it tight */
     display: flex;      /*Displays nav bar in a line*/
     align-items: center;
