@@ -168,12 +168,8 @@ nav {
 
     /* Fix: prevent .navi from acting like a flex container */
     navi {
-        display: block; /* Stops layout from pushing hamburger */
-    }
+        display: none; /* Stops layout from pushing hamburger */
 
-
-    nav {
-        padding: 30px 0; /* change this to whatever you want */
     }
 
     /* Show hamburger on mobile */
@@ -184,7 +180,6 @@ nav {
         top: 15px;             /* Align vertically */
         z-index: 999;
         cursor: pointer;
-        padding: 10px 0;
     }
 
     /* Keep dark mode button on right */
