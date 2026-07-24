@@ -184,6 +184,11 @@ nav {
         z-index: 999;
     }
 
+
+    .navi {
+        display: none;
+    }
+
     /* Hide nav menu until hamburger is clicked */
     .navi ul { 
         display: none !important;
@@ -195,6 +200,10 @@ nav {
         width: 100%;
         text-align: center;
     }
+
+    .navi.active {
+        display: block;
+}
 
     /* When menu is active (JS toggles .active) */
     .navi.active ul {
