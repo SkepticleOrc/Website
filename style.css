@@ -1,94 +1,95 @@
-
-/*This module controls the page layout background colours*/
+/* ============================
+   GLOBAL PAGE COLOURS & LAYOUT
+   ============================ */
 
 /* Light mode (default) */
 body {
-    background-color: #ffffff;
-    color: #000000;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100dvh; /* mobile-safe */
-
-
+    background-color: #ffffff;   /* White background */
+    color: #000000;              /* Black text */
+    margin: 0;                   /* Remove default browser margin */
+    display: flex;               /* Allows footer to stick to bottom */
+    flex-direction: column;      /* Stack content vertically */
+    min-height: 100dvh;          /* Full viewport height, mobile-safe */
 }
 
 /* Dark mode (activated when JS adds .dark-mode) */
 body.dark-mode {
-    background-color: #000000;
-    color: #ffffff;
-
+    background-color: #000000;   /* Black background */
+    color: #ffffff;              /* White text */
 }
 
-
-html, body{
+/* Prevent horizontal scrolling */
+html, body {
     overflow-x: hidden;
     height: 100%;
     margin: 0;
 }
 
 main {
-    flex: 1;
+    flex: 1; /* Pushes footer to bottom */
 }
 
-/*---------------------------------------------------------------------------------------*/
+
+/* ============================
+   NAVIGATION BAR (DESKTOP)
+   ============================ */
+
 nav {
-
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4); /* Transparent black */
     color: #ffffff;
-    padding: 15px 0; /*Adds space to the nav menu*/
-    position: relative;
+    padding: 15px 0;                     /* Vertical spacing */
+    position: relative;                  /* IMPORTANT: anchors hamburger & dark button */
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);         /* Frosted glass effect */
 }
 
-
-/*---------------------------------------------------------------------------------------*/
+/* Nav links */
 .navi a {
-    text-decoration:none;
-    color:inherit;
+    text-decoration: none;
+    color: inherit; /* Inherit white text */
 }
-/*---------------------------------------------------------------------------------------*/
-/*This module removes the dots on the nav bar ul lists*/
+
+/* Desktop nav layout */
 .navi ul {
-    list-style: none;   /* Removes the dots from the nav menu */
-    padding: 0 15px;         /* Removes the left indent */
-    margin: 0;          /* Keeps it tight */
-    display: flex;      /*Displays nav bar in a line*/
+    list-style: none;        /* Remove bullets */
+    padding: 0 15px;         /* Horizontal spacing */
+    margin: 0;
+    display: flex;           /* Horizontal menu */
     align-items: center;
-    gap:20px;
-    justify-content: left;
-    flex-wrap: wrap;
-    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-weight: 500; /* clean, modern weight */
-    letter-spacing: 0.5px; /* optional but looks great */
+    gap: 20px;               /* Space between items */
+    justify-content: left;   /* Align left */
+    flex-wrap: wrap;         /* Wrap if needed */
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
     font-size: 16px;
 }
 
-/*---------------------------------------------------------------------------------------*/
-/*This module isolates the dark mode button, enabling it to move alone.*/
+/* Dark mode button (desktop) */
 .darkbutton {
-    position: absolute;
-    right: 20px;
-    top: 15px;
+    position: absolute;  /* Float independently */
+    right: 20px;         /* Stick to right side */
+    top: 15px;           /* Align vertically */
     display: flex;
-    z-index: 999;
-
-
-    /*margin-left: auto; /*Margin-left: auto pushes the darkbutton all the way to the right
-    padding: 0 30px;*/
+    z-index: 999;        /* Above nav */
 }
 
 
+/* ============================
+   WALLPAPER IMAGE
+   ============================ */
+
 .Wallpaper {
-    width: 100vw;
+    width: 100vw; /* Full width */
     height: auto;
     display: block;
 }
 
-/*FOOTER STUFF*/
-/*---------------------------------------------------------------------------------------*/
+
+/* ============================
+   FOOTER
+   ============================ */
+
 .site-footer {
     background: black;
     color: #fff;
@@ -101,41 +102,45 @@ nav {
     flex-shrink: 0;
 }
 
-  .footer-column {
+.footer-column {
     min-width: 180px;
     margin: 10px 0;
 }
 
-  .footer-column h3 {
+.footer-column h3 {
     margin-bottom: 10px;
     font-size: 18px;
     border-bottom: 2px solid #555;
     padding-bottom: 5px;
 }
 
-  .footer-column ul {
+.footer-column ul {
     list-style: none;
     padding: 0;
 }
 
-  .footer-column ul li {
+.footer-column ul li {
     margin: 20px 0;
-    display: block;
 }
 
-  .footer-column ul li a {
+.footer-column ul li a {
     color: #ccc;
     text-decoration: none;
     transition: 0.2s;
 }
 
-  .footer-column ul li a:hover {
+.footer-column ul li a:hover {
     color: #fff;
     text-decoration: underline;
 }
 
+
+/* ============================
+   HAMBURGER ICON (DESKTOP)
+   ============================ */
+
 .hamburger {
-    display: none; /* hidden on desktop */
+    display: none; /* Hidden on desktop */
     cursor: pointer;
 }
 
@@ -149,33 +154,34 @@ nav {
 }
 
 
+/* ============================
+   MOBILE OVERRIDES
+   ============================ */
 
-
-/* Responsive overrides (ALWAYS at the bottom) */
 @media (max-width: 600px){
 
+    /* Remove outer spacing on mobile */
     html, body {
         margin: 0;
-        padding: 0;   /* removes ALL outer white space */
+        padding: 0;
     }
 
-    /* ---------------- NAV TWEAKS ---------------- */
-
+    /* Fix: prevent .navi from acting like a flex container */
     navi {
-        display: block;
+        display: block; /* Stops layout from pushing hamburger */
     }
-
 
     /* Show hamburger on mobile */
     .hamburger {
-        display: block;
-        position: absolute;
-        left: 20px; /*Moves the hamburger symbol*/
-        top: 15px;
+        display: block;        /* Make it visible */
+        position: absolute;    /* Float independently */
+        left: 20px;            /* Move to left side */
+        top: 15px;             /* Align vertically */
         z-index: 999;
         cursor: pointer;
     }
 
+    /* Keep dark mode button on right */
     .darkbutton {
         position: absolute;
         right: 20px;
@@ -183,6 +189,7 @@ nav {
         z-index: 999;
     }
 
+    /* Hamburger bar styling (same as desktop) */
     .hamburger span {
         display: block;
         width: 28px;
@@ -192,39 +199,37 @@ nav {
         transition: 0.3s;
     }
 
-
-
-    /* Hide nav menu initially */
+    /* Hide nav menu until hamburger is clicked */
     .navi ul { 
-        display: none !important;      /* hidden until burger clicked */
-        flex-direction: column;        /* vertical menu */
-        gap: 10px; 
-        padding: 20px;                 /* spacing inside dropdown */
-        background: rgba(0,0,0,0.9);   /* dropdown background */
-        margin-top: 60px;              /* sits below hamburger */
+        display: none !important; /* Hidden by default */
+        flex-direction: column;   /* Vertical dropdown */
+        gap: 10px;
+        padding: 20px;
+        background: rgba(0,0,0,0.9);
+        margin-top: 60px;         /* Below hamburger */
         width: 100%;
         text-align: center;
     }
 
-    /* When menu is active (JS toggles .active) */
+    /* Show menu when .active is added by JS */
     .navi.active ul {
         display: flex !important;
     }
 
+    /* Smaller text on mobile */
     .navi a { 
         font-size: 14px;
-        padding: 0px 15px; /*Adds space to the nav menu*/
+        padding: 0px 15px;
     }
 
     .darkbutton { 
-        padding: 0 10px; 
+        padding: 0 10px;
     }
 
-
-    /* ---------------- FOOTER FIXES ---------------- */
+    /* Footer becomes vertical */
     .site-footer {
-        border: none; /* removes any border-top */
-        margin: 0;    /* removes any leftover margin */
+        border: none;
+        margin: 0;
         padding: 35px 20px;
         display: flex;
         flex-direction: column;
@@ -234,34 +239,21 @@ nav {
     }
 
     .site-footer h3 {
-        margin-bottom: 10px;        /* spacing above links */
+        margin-bottom: 10px;
         font-size: 0.95rem;
     }
 
     .site-footer li {
-        margin: 6px 0;              /* spacing between links */
+        margin: 6px 0;
     }
 
     .site-footer a {
-        font-size: 0.9rem;          /* slightly smaller text */
+        font-size: 0.9rem;
     }
 
-
-    /* ---------------- PAGE-WIDE SCALING ---------------- */
-    body { 
-        padding: 0px; 
-    }
-
-    main { 
-        margin: 0; 
-    }
-
-    h1 { 
-        font-size: 24px; 
-    }
-
-    p { 
-        font-size: 16px; 
-    }
+    /* General mobile scaling */
+    body { padding: 0px; }
+    main { margin: 0; }
+    h1 { font-size: 24px; }
+    p { font-size: 16px; }
 }
-
