@@ -10,12 +10,14 @@ body {
     flex-direction: column;
     min-height: 100dvh; /* mobile-safe */
 
+
 }
 
 /* Dark mode (activated when JS adds .dark-mode) */
 body.dark-mode {
     background-color: #000000;
     color: #ffffff;
+
 }
 
 
@@ -34,7 +36,7 @@ nav {
 
     background-color: black;
     color: #ffffff;
-    padding: 15px 0;
+    padding: 15px 15px;
     position: absolute;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
@@ -153,7 +155,7 @@ nav {
     /* NAV TWEAKS */
     .navi ul { 
         gap: 10px; 
-        padding: 10px; 
+        padding: 0px 10px; 
     }
 
     .navi a { 
