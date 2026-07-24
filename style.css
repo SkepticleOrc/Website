@@ -69,10 +69,15 @@ nav {
 /*---------------------------------------------------------------------------------------*/
 /*This module isolates the dark mode button, enabling it to move alone.*/
 .darkbutton {
-    justify-content: right;
+    position: absolute;
+    right: 20px;
+    top: 15px;
     display: flex;
-    margin-left: auto; /*Margin-left: auto pushes the darkbutton all the way to the right*/
-    padding: 0 30px;
+    z-index: 999;
+
+
+    /*margin-left: auto; /*Margin-left: auto pushes the darkbutton all the way to the right
+    padding: 0 30px;*/
 }
 
 
@@ -160,12 +165,17 @@ nav {
     .hamburger {
         display: block;
         position: absolute;
-        right: 20px;
+        left: 20px; /*Moves the hamburger symbol*/
         top: 15px;
         z-index: 999;
         cursor: pointer;
     }
 
+    .darkbutton {
+        right: 20px;
+        top: 15px;
+    }
+    
     .hamburger span {
         display: block;
         width: 28px;
