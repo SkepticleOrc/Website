@@ -168,6 +168,7 @@ nav {
         flex-direction: column;     /* stack sections vertically */
         align-items: center;        /* center everything */
         gap: 25px;                  /* spacing between each section */
+        border: none;
     }
 
     .site-footer h3 {
