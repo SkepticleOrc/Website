@@ -1,0 +1,137 @@
+
+/*This module controls the page layout background colours*/
+
+/* Light mode (default) */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+
+}
+
+/* Dark mode (activated when JS adds .dark-mode) */
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+html, body{
+    overflow-x: hidden;
+}
+
+/*---------------------------------------------------------------------------------------*/
+nav {
+
+    background-color: black;
+    color: #ffffff;
+    padding: 15px 0;
+    position: absolute;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+/*---------------------------------------------------------------------------------------*/
+.navi a {
+    text-decoration:none;
+    color:inherit;
+}
+/*---------------------------------------------------------------------------------------*/
+/*This module removes the dots on the nav bar ul lists*/
+.navi ul {
+    list-style: none;   /* Removes the dots from the nav menu */
+    padding: 1;         /* Removes the left indent */
+    margin: 0;          /* Keeps it tight */
+    display: flex;      /*Displays nav bar in a line*/
+    align-items: center;
+    gap:30px;
+    justify-content: left;
+    flex-wrap: wrap;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 500; /* clean, modern weight */
+    letter-spacing: 0.5px; /* optional but looks great */
+    font-size: 16px;
+}
+
+
+
+@media (max-width: 600px) {
+    .navi ul {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .navi a {
+        font-size: 14px;
+    }
+
+    .darkbutton {
+        padding: 0 10px;
+    }
+}
+
+
+
+
+/*---------------------------------------------------------------------------------------*/
+/*This module isolates the dark mode button, enabling it to move alone.*/
+.darkbutton {
+    justify-content: right;
+    display: flex;
+    margin-left: auto; /*Margin-left: auto pushes the darkbutton all the way to the right*/
+    padding: 0 30px;
+}
+
+
+.Wallpaper {
+    width: 100vw;
+    height: auto;
+    display: block;
+}
+
+/*FOOTER STUFF*/
+/*---------------------------------------------------------------------------------------*/
+.site-footer {
+    background: black;
+    color: #fff;
+    padding: 40px 0px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+  .footer-column {
+    min-width: 180px;
+    margin: 10px 0;
+}
+
+  .footer-column h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+}
+
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+  .footer-column ul li {
+    margin: 20px 0;
+    display: block;
+}
+
+  .footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+  .footer-column ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
