@@ -1,76 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>SkepticleOrc</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-	<link rel="stylesheet" href="style.css">
-	<link rel="icon" type="image/png" href="icons/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkepticleOrc</title>
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icons/favicon.png">
 </head>
+
 <body>
-	<header>
-		<nav>
-			<div class="navi">
-				<ul>
-					<li><a href="index.html">HOME</a></li>
-					<li><a href="portfolio.html">PORTFOLIO</a></li>
-					<li><a href="designs.html">WEBSITE DESIGNS</a></li>
-					<li><a href="https://github.com/SkepticleOrc" target="_blank" rel="noopener noreferrer">GITHUB</a></li>
-				</ul>
-			</div>
-		</nav>
+    <header>
+        <nav>
+            <div class="navi">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="designs.html">WEBSITE DESIGNS</a></li>
+                    <li><a href="https://github.com/SkepticleOrc" target="_blank" rel="noopener noreferrer">GITHUB</a></li>
+                </ul>
+            </div>
+        </nav>
 
+        <!-- Header Controls -->
+        <div class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-		<div class="hamburger">
-			<span></span>
-        	<span></span>
-        	<span></span>
-		</div>
+        <div class="darkbutton">
+            <button id="darkToggler" aria-label="Toggle dark mode">DARK MODE</button>
+        </div>
+    </header>
 
+    <main>
+        <img class="Wallpaper" src="images/Wallpaper.png" alt="">
+    </main>
 
-		<div class="darkbutton">
-        	<button id="darkToggler">DARK MODE</button>
-    	</div>
+    <footer class="site-footer">
+        <div class="footer-column">
+            <h3>Developer</h3>
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
 
-	</header>
-<main>
-	<img class="Wallpaper" src="images/Wallpaper.png">
-</main>
+        <div class="footer-column">
+            <h3>Learn</h3>
+            <ul>
+                <li>Algorithms</li>
+                <li>Data Structures</li>
+                <li>Languages</li>
+            </ul>
+        </div>
 
-<footer class="site-footer">
-	<div class="footer-column">
-    	<h3>Developer</h3>
-    	<ul>
-      		<li><a href="about.html">About Me</a></li>
-      		<li><a href="contact.html">Contact</a></li>
-      		<li>Privacy Policy</li>
-    	</ul>
-  	</div>
+        <div class="footer-column">
+            <h3>Practice</h3>
+            <ul>
+                <li>Contests</li>
+                <li>Topic-wise</li>
+                <li>Company-wise</li>
+            </ul>
+        </div>
+    </footer>
 
-  	<div class="footer-column">
-    	<h3>Learn</h3>
-    	<ul>
-      		<li>Algorithms</li>
-      		<li>Data Structures</li>
-      		<li>Languages</li>
-    	</ul>
-  	</div>
-
-  	<div class="footer-column">
-    	<h3>Practice</h3>
-    	<ul>
-      		<li>Contests</li>
-      		<li>Topic-wise</li>
-      		<li>Company-wise</li>
-    	</ul>
-  	</div>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
