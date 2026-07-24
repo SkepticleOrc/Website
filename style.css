@@ -144,15 +144,59 @@ nav {
 
 /* Responsive overrides (ALWAYS at the bottom) */
 @media (max-width: 400px) {
-    /* nav tweaks */
-    .navi ul { gap: 10px; padding: 10px; }
-    .navi a { font-size: 14px; }
-    .darkbutton { padding: 0 10px; }
-    .site-footer { padding: 0 10px; }
 
-    /* page-wide scaling */
-    body { padding: 10px; }
-    main { margin: 0; }
-    h1 { font-size: 24px; }
-    p { font-size: 16px; }
+    /* NAV TWEAKS */
+    .navi ul { 
+        gap: 10px; 
+        padding: 10px; 
+    }
+
+    .navi a { 
+        font-size: 14px; 
+    }
+
+    .darkbutton { 
+        padding: 0 10px; 
+    }
+
+
+    /* FOOTER FIXES — STOP CRAMPING */
+    .site-footer {
+        padding: 25px 15px;         /* breathing room */
+        display: flex;
+        flex-direction: column;     /* stack sections vertically */
+        align-items: center;        /* center everything */
+        gap: 25px;                  /* spacing between each section */
+    }
+
+    .site-footer h3 {
+        margin-bottom: 10px;        /* spacing above links */
+        font-size: 0.95rem;
+    }
+
+    .site-footer li {
+        margin: 6px 0;              /* spacing between links */
+    }
+
+    .site-footer a {
+        font-size: 0.9rem;          /* slightly smaller text */
+    }
+
+
+    /* PAGE-WIDE SCALING */
+    body { 
+        padding: 10px; 
+    }
+
+    main { 
+        margin: 0; 
+    }
+
+    h1 { 
+        font-size: 24px; 
+    }
+
+    p { 
+        font-size: 16px; 
+    }
 }
