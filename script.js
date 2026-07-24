@@ -16,11 +16,10 @@ darkToggle.addEventListener('click', () => {
     }
 });
 
-
 const hamburger = document.querySelector('.hamburger');
 const navi = document.querySelector('.navi');
 
 hamburger.addEventListener('click', () => {
-    navi.classList.toggle('active');
     hamburger.classList.toggle('active');
+    navi.classList.toggle('active');
 });
