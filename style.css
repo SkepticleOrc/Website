@@ -169,6 +169,7 @@ nav {
         align-items: center;        /* center everything */
         gap: 25px;                  /* spacing between each section */
         border: none;
+        margin: 0;
     }
 
     .site-footer h3 {
