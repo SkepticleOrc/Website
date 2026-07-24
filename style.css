@@ -35,7 +35,7 @@ main {
    ============================ */
 
 nav {
-    background-color: rgba(0, 0, 0, 0.4); /* Transparent black */
+    background-color: rgba(0, 0, 0, 1.0); /* if you want tansparent, change the 1.0 value */
     color: #ffffff;
     padding: 15px 0;                     /* Vertical spacing */
     position: relative;                  /* IMPORTANT: anchors hamburger & dark button */
