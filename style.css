@@ -57,7 +57,7 @@ nav {
     margin: 0;          /* Keeps it tight */
     display: flex;      /*Displays nav bar in a line*/
     align-items: center;
-    gap:30px;
+    gap:20px;
     justify-content: left;
     flex-wrap: wrap;
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -129,21 +129,22 @@ nav {
     text-decoration: underline;
 }
 
+.hamburger {
+    display: none; /* hidden on desktop */
+    cursor: pointer;
+}
 
-/*@media (max-width: 600px) {
-    .navi ul {
-        gap: 10px;
-        padding: 10px;
-    }
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: white;
+    margin: 6px 0;
+    transition: 0.3s;
+}
 
-    .navi a {
-        font-size: 14px;
-    }
 
-    .darkbutton {
-        padding: 0 10px;
-    }
-}*/
+
 
 /* Responsive overrides (ALWAYS at the bottom) */
 @media (max-width: 480px) {
@@ -153,10 +154,42 @@ nav {
         padding: 0;   /* removes ALL outer white space */
     }
 
-    /* NAV TWEAKS */
+    /* ---------------- NAV TWEAKS ---------------- */
+
+    /* Show hamburger on mobile */
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: white;
+        margin: 6px 0;
+        transition: 0.3s;
+    }
+
+    /* Hide nav menu initially */
     .navi ul { 
+        display: none;                 /* hidden until burger clicked */
+        flex-direction: column;        /* vertical menu */
         gap: 10px; 
-        padding: 10px; 
+        padding: 20px;                 /* spacing inside dropdown */
+        background: rgba(0,0,0,0.9);   /* dropdown background */
+        margin-top: 60px;              /* sits below hamburger */
+        width: 100%;
+        text-align: center;
+    }
+
+    /* When menu is active (JS toggles .active) */
+    .navi.active ul {
+        display: flex;
     }
 
     .navi a { 
@@ -169,7 +202,7 @@ nav {
     }
 
 
-    /* FOOTER FIXES — STOP CRAMPING */
+    /* ---------------- FOOTER FIXES ---------------- */
     .site-footer {
         border: none; /* removes any border-top */
         margin: 0;    /* removes any leftover margin */
@@ -195,7 +228,7 @@ nav {
     }
 
 
-    /* PAGE-WIDE SCALING */
+    /* ---------------- PAGE-WIDE SCALING ---------------- */
     body { 
         padding: 0px; 
     }
@@ -212,3 +245,4 @@ nav {
         font-size: 16px; 
     }
 }
+

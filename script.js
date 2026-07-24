@@ -15,3 +15,12 @@ darkToggle.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
     }
 });
+
+
+const hamburger = document.querySelector('.hamburger');
+const navi = document.querySelector('.navi');
+
+hamburger.addEventListener('click', () => {
+    navi.classList.toggle('active');
+    hamburger.classList.toggle('active');
+});
