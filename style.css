@@ -167,7 +167,7 @@ nav {
     }
 
     /* Fix: prevent .navi from acting like a flex container */
-    navi {
+    .navi {
         display: none; /* Stops layout from pushing hamburger */  
     }
 
