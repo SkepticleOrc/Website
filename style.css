@@ -168,6 +168,13 @@ nav {
         padding: 0;
     }
 
+    header, nav {
+        transform: none !important;
+        backdrop-filter: none !important;
+        overflow: visible !important;
+    }
+
+
     nav{
         background-color: transparent;
         backdrop-filter: none;     /* ← THIS removes the frosted bar */
