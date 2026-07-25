@@ -173,7 +173,7 @@ nav {
     }
 
     nav{
-        background-color: rgba(0, 0, 0, 0.0); /* if you want tansparent, change the 1.0 value */
+        background-color: rgba(0, 0, 0, 1.0); /* if you want tansparent, change the 1.0 value */
         backdrop-filter: none;     /* ← THIS removes the frosted bar */
         padding: 0;
         height: 0;
@@ -195,13 +195,13 @@ nav {
         width: 28px;
     }   
 
-    .hamburger.active {
+    /*.hamburger.active {
         background-color: #000;
         padding: 16px;
         width: 100%;
         top:0;
         left: 0;
-    }
+    }*/
 
     /* Keep dark mode button on right */
     .darkbutton {
