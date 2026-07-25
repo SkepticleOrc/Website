@@ -20,8 +20,6 @@ body.dark-mode {
 
 /* Prevent horizontal scrolling */
 html, body {
-    overflow-x: hidden;
-    height: 100%;
     margin: 0;
 }
 
@@ -163,25 +161,11 @@ nav {
 
 @media (max-width: 600px){
 
-    html, body {
-        margin: 0;
-        padding: 0;
-    }
-
-    header, nav {
-        transform: none !important;
-        backdrop-filter: none !important;
-        overflow: visible !important;
-    }
-
-
     nav{
         background-color: transparent;
         backdrop-filter: none;     /* ← THIS removes the frosted bar */
         padding: 0;
-        height: 0;
         overflow: visible;
-        border: none;              /* ← In case a border is showing */
     }
 
     /* Show hamburger on mobile */
@@ -209,12 +193,6 @@ nav {
     .navi {
         display: none;
     }
-
-
-    .navi.active {
-        display: block;
-    }
-
 
     /* Hide nav menu until hamburger is clicked */
     .navi ul { 
@@ -263,9 +241,6 @@ nav {
         font-size: 0.9rem;
     }
 
-    header{background: none}
-    body { padding: 0px; }
-    main { margin: 0; }
     h1 { font-size: 24px; }
     p { font-size: 16px; }
 }
