@@ -42,12 +42,12 @@ header {
    ============================ */
 
 nav {
-    background-color: rgba(0, 0, 0, 1.0); /* if you want tansparent, change the 1.0 value */
+    background-color: rgba(0, 0, 0, 0.5); /* if you want tansparent, change the 1.0 value */
     color: #ffffff;
     padding: 15px 0;                     /* Vertical spacing */
-    position: relative;                  /* IMPORTANT: anchors hamburger & dark button */
+    position: absolute;                  /* IMPORTANT: anchors hamburger & dark button */
     width: 100%;
-    backdrop-filter: blur(10px);         /* Frosted glass effect */
+    backdrop-filter: blur(5px);         /* Frosted glass effect */
     z-index: 1;
 }
 
@@ -179,6 +179,8 @@ nav {
         height: 0;
         overflow: visible;
         border: none;              /* ← In case a border is showing */
+        padding: 15px 0;                     /* Vertical spacing */
+        width: 100%;
         z-index: 1;
     }
 
