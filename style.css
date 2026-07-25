@@ -29,9 +29,6 @@ main {
     flex: 1; /* Pushes footer to bottom */
 }
 
-header {
-    position: relative;
-}
 
 /* ============================
    NAVIGATION BAR (DESKTOP)
@@ -74,6 +71,7 @@ nav {
     position: absolute;  /* Float independently */
     right: 20px;         /* Stick to right side */
     top: 15px;           /* Align vertically */
+    /*display: flex;*/
     z-index: 9999;        /* Above nav */
 }
 
@@ -168,12 +166,6 @@ nav {
         padding: 0;
     }
 
-    header, nav {
-        transform: none !important;
-        backdrop-filter: none !important;
-        overflow: visible !important;
-    }
-
     nav{
         background-color: transparent;
         backdrop-filter: none;     /* ← THIS removes the frosted bar */
@@ -186,10 +178,10 @@ nav {
     /* Show hamburger on mobile */
     .hamburger {
         display: block;
-        position: fixed;
+        position: absolute;
         left: 20px;
         top: 15px;
-        z-index: 3000;
+        z-index: 999;
         cursor: pointer;
     }
 
@@ -198,31 +190,34 @@ nav {
         position: fixed;
         right: 20px;
         top: 15px;
-        z-index: 3000;
-        background: none;
-        padding: 0;
-        height: auto;
+        z-index: 999;
+        padding: 0 10px;
     }
+
 
     .navi {
         display: none;
     }
 
+
     .navi.active {
         display: block;
     }
+
 
     /* Hide nav menu until hamburger is clicked */
     .navi ul { 
         display: none !important;
         flex-direction: column;
         gap: 10px;
-        padding: 80px 20px 20px;
+        padding: 20px;
         background: rgba(0,0,0,0.9);
+        margin-top: 60px;
         width: 100%;
         text-align: center;
     }
 
+  
     /* When menu is active (JS toggles .active) */
     .navi.active ul {
         display: flex !important;
@@ -258,7 +253,6 @@ nav {
         font-size: 0.9rem;
     }
 
-    header{background: none}
     body { padding: 0px; }
     main { margin: 0; }
     h1 { font-size: 24px; }
