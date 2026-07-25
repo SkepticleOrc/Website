@@ -20,6 +20,8 @@ body.dark-mode {
 
 /* Prevent horizontal scrolling */
 html, body {
+    overflow-x: hidden;
+    height: 100%;
     margin: 0;
 }
 
@@ -161,11 +163,24 @@ nav {
 
 @media (max-width: 600px){
 
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+    header, nav {
+        transform: none !important;
+        backdrop-filter: none !important;
+        overflow: visible !important;
+    }
+
     nav{
         background-color: transparent;
         backdrop-filter: none;     /* ← THIS removes the frosted bar */
         padding: 0;
+        height: 0;
         overflow: visible;
+        border: none;              /* ← In case a border is showing */
     }
 
     /* Show hamburger on mobile */
@@ -174,7 +189,7 @@ nav {
         position: fixed;
         left: 20px;
         top: 15px;
-        z-index: 10000;
+        z-index: 3000;
         cursor: pointer;
     }
 
@@ -183,15 +198,18 @@ nav {
         position: fixed;
         right: 20px;
         top: 15px;
-        z-index: 10000;
+        z-index: 3000;
         background: none;
         padding: 0;
         height: auto;
     }
 
-
     .navi {
         display: none;
+    }
+
+    .navi.active {
+        display: block;
     }
 
     /* Hide nav menu until hamburger is clicked */
@@ -203,15 +221,8 @@ nav {
         background: rgba(0,0,0,0.9);
         width: 100%;
         text-align: center;
-
-        /* FIX — these override desktop behaviour */
-        position: fixed;     /* attaches menu to viewport */
-        top: 60px;           /* appears BELOW hamburger */
-        left: 0;
-        z-index: 2000;       /* BELOW hamburger (10000) */
     }
 
-  
     /* When menu is active (JS toggles .active) */
     .navi.active ul {
         display: flex !important;
@@ -247,6 +258,9 @@ nav {
         font-size: 0.9rem;
     }
 
+    header{background: none}
+    body { padding: 0px; }
+    main { margin: 0; }
     h1 { font-size: 24px; }
     p { font-size: 16px; }
 }
