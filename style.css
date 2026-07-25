@@ -257,9 +257,16 @@ nav {
         font-size: 0.9rem;
     }
 
-    header{background: none}
+    header{
+        background-color: #000;   /* was: background: none */
+        height: 60px;             /* enough to cover the hamburger/dark button area */
+    }
+
     body { padding: 0px; }
+
     main { margin: 0; }
+
     h1 { font-size: 24px; }
+    
     p { font-size: 16px; }
 }
