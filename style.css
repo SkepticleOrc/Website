@@ -175,12 +175,11 @@ nav {
     nav{
         background-color: rgba(0, 0, 0, 1.0); /* if you want tansparent, change the 1.0 value */
         backdrop-filter: none;     /* ← THIS removes the frosted bar */
-        padding: 0;
+        padding: 15px 0;            /* Vertical spacing */
         height: 0;
-        overflow: visible;
-        border: none;              /* ← In case a border is showing */
-        padding: 15px 0;                     /* Vertical spacing */
         width: 100%;
+        overflow: visible;
+        border: none;              /* ← In case a border is showing */               
         z-index: 1;
     }
 
