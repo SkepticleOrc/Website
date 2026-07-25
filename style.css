@@ -184,13 +184,11 @@ nav {
 
     /* Show hamburger on mobile */
     .hamburger {
-        background-color: black;
         display: block;
         position: fixed;
-        center: 20px;
         left: 0;
         right: 0;
-        margin: 6px auto;
+        margin: 0 auto; 
         top: 15px;
         z-index: 20;
         cursor: pointer;
@@ -272,7 +270,7 @@ nav {
     }
 
     header{
-        background-color: #000;   /* was: background: none */
+        background-color: black;   /* was: background: none */
         height: 60px;             /* enough to cover the hamburger/dark button area */
     }
 
