@@ -75,6 +75,12 @@ nav {
     right: 20px;         /* Stick to right side */
     top: 15px;           /* Align vertically */
     z-index: 9999;        /* Above nav */
+
+    border: none;
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: none; /* ← iOS fix */
+    appearance: none;         /* ← general fix */
 }
 
 
