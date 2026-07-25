@@ -184,12 +184,13 @@ nav {
 
     /* Show hamburger on mobile */
     .hamburger {
+        background-color: black;
         display: block;
         position: fixed;
         center: 20px;
         left: 0;
         right: 0;
-        margin: 0 auto;
+        margin: 6px auto;
         top: 15px;
         z-index: 20;
         cursor: pointer;
@@ -214,13 +215,11 @@ nav {
 
 
     .navi.active {
-        background-color: black;
         display: block;
         position: fixed;
         top: 60px; /* sits right below the header */
         left: 0;
         width: 100%;
-        margin: 6px 0;
     }
 
 
