@@ -193,7 +193,9 @@ nav {
         right: 20px;
         top: 15px;
         z-index: 3000;
-        /*padding: 0 10px;*/
+        background: none;
+        padding: 0;
+        height: auto;
     }
 
 
@@ -255,6 +257,7 @@ nav {
         font-size: 0.9rem;
     }
 
+    header{background: none}
     body { padding: 0px; }
     main { margin: 0; }
     h1 { font-size: 24px; }
