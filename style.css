@@ -195,6 +195,10 @@ nav {
         width: 28px;
     }
 
+    .hamburger.active {
+        background-color: black;   /* pick whatever color you'd like when open */
+    }
+
     /* Keep dark mode button on right */
     .darkbutton {
         position: fixed;
@@ -270,7 +274,7 @@ nav {
     }
 
     header{
-        background-color: black;   /* was: background: none */
+        background-color: #000;   /* was: background: none */
         height: 60px;             /* enough to cover the hamburger/dark button area */
     }
 
