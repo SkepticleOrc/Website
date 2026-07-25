@@ -2,6 +2,10 @@
    GLOBAL PAGE COLOURS & LAYOUT
    ============================ */
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* Light mode (default) */
 body {
     background-color: #ffffff;   /* White background */
