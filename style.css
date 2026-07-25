@@ -29,6 +29,9 @@ main {
     flex: 1; /* Pushes footer to bottom */
 }
 
+header {
+    position: relative;
+}
 
 /* ============================
    NAVIGATION BAR (DESKTOP)
@@ -71,7 +74,6 @@ nav {
     position: absolute;  /* Float independently */
     right: 20px;         /* Stick to right side */
     top: 15px;           /* Align vertically */
-    /*display: flex;*/
     z-index: 9999;        /* Above nav */
 }
 
@@ -191,7 +193,9 @@ nav {
         right: 20px;
         top: 15px;
         z-index: 3000;
-        /*padding: 0 10px;*/
+        background: none;
+        padding: 0;
+        height: auto;
     }
 
 
@@ -253,6 +257,7 @@ nav {
         font-size: 0.9rem;
     }
 
+    header{background: none}
     body { padding: 0px; }
     main { margin: 0; }
     h1 { font-size: 24px; }
