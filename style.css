@@ -203,6 +203,12 @@ nav {
         background: rgba(0,0,0,0.9);
         width: 100%;
         text-align: center;
+
+        /* FIX — these override desktop behaviour */
+        position: fixed;     /* attaches menu to viewport */
+        top: 60px;           /* appears BELOW hamburger */
+        left: 0;
+        z-index: 2000;       /* BELOW hamburger (10000) */
     }
 
   
