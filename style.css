@@ -44,7 +44,7 @@ nav {
     position: relative;                  /* IMPORTANT: anchors hamburger & dark button */
     width: 100%;
     backdrop-filter: blur(10px);         /* Frosted glass effect */
-    z-index: 9999;
+    z-index: 1;
 }
 
 /* Nav links */
@@ -74,7 +74,7 @@ nav {
     position: absolute;  /* Float independently */
     right: 20px;         /* Stick to right side */
     top: 15px;           /* Align vertically */
-    z-index: 9999;        /* Above nav */
+    z-index: 10;        /* Above nav */
 }
 
 
@@ -175,6 +175,7 @@ nav {
         height: 0;
         overflow: visible;
         border: none;              /* ← In case a border is showing */
+        z-index: 1;
     }
 
     /* Show hamburger on mobile */
@@ -183,7 +184,7 @@ nav {
         position: fixed;
         left: 20px;
         top: 15px;
-        z-index: 3000;
+        z-index: 20;
         cursor: pointer;
     }
 
@@ -192,7 +193,7 @@ nav {
         position: fixed;
         right: 20px;
         top: 15px;
-        z-index: 3000;
+        z-index: 20;
         background: none;
         padding: 0;
         height: auto;
@@ -218,6 +219,7 @@ nav {
         background: rgba(0,0,0,0.9);
         width: 100%;
         text-align: center;
+        z-index: 10;
     }
 
   
