@@ -221,9 +221,8 @@ nav {
         display: none !important;
         flex-direction: column;
         gap: 10px;
-        padding: 20px;
+        padding: 80px 20px 20px;
         background: rgba(0,0,0,0.9);
-        margin-top: 60px;
         width: 100%;
         text-align: center;
     }
