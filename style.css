@@ -211,6 +211,10 @@ nav {
 
     .navi.active {
         display: block;
+        position: fixed;
+        top: 60px; /* sits right below the header */
+        left: 0;
+        width: 100%;
     }
 
 
