@@ -174,7 +174,7 @@ nav {
         position: fixed;
         left: 20px;
         top: 15px;
-        z-index: 3001;
+        z-index: 10000;
         cursor: pointer;
     }
 
@@ -183,7 +183,7 @@ nav {
         position: fixed;
         right: 20px;
         top: 15px;
-        z-index: 3000;
+        z-index: 10000;
         background: none;
         padding: 0;
         height: auto;
