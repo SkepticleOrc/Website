@@ -214,6 +214,7 @@ nav {
 
 
     .navi.active {
+        background-color: black;
         display: block;
         position: fixed;
         top: 60px; /* sits right below the header */
