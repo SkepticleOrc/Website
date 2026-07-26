@@ -167,6 +167,10 @@ nav {
 
 @media (max-width: 600px){
 
+     html {
+        background-color: #000;
+    }
+
     html, body {
         margin: 0;
         padding: 0;
