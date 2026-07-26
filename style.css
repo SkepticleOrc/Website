@@ -60,7 +60,7 @@ nav {
 /* Desktop nav layout */
 .navi ul {
     list-style: none;        /* Remove bullets */
-    padding: 0 15px;         /* Horizontal spacing */
+    padding: 0 0 0 80px;         /* Horizontal spacing */
     margin: 0;
     display: flex;           /* Horizontal menu */
     align-items: center;
@@ -91,6 +91,21 @@ nav {
     height: auto;
     display: block;
 }
+
+.logo {
+
+    position: absolute;
+    left: 20px;
+    top: 5px;
+    z-index: 10;
+}
+
+.logo img {
+    width: 40px;   /* displayed size — much smaller than the actual 600x600 file */
+    height: 40px;
+    display: block;
+}
+
 
 
 /* ============================
@@ -189,6 +204,20 @@ nav {
         border: none;              /* ← In case a border is showing */               
         z-index: 1;
     }
+
+    .logo {
+        position: fixed;
+        left: 20px;
+        top: 15px;
+        z-index: 20;
+    }
+
+    .logo img {
+        width: 32px;   /* slightly smaller to fit the mobile bar comfortably */
+        height: 32px;
+        display: block;
+    }
+
 
     /* Show hamburger on mobile */
     .hamburger {
