@@ -176,7 +176,7 @@ nav {
         background-color: rgba(0, 0, 0, 1.0); /* if you want tansparent, change the 1.0 value */
         backdrop-filter: none;     /* ← THIS removes the frosted bar */
         position: fixed;
-        padding: 0px 0px 30px 0px;     /* padding-bottom: 30px; applied */
+        padding: 0px 0px 60px 0px;     /* padding-bottom: 60px; applied */
         width: 100%;
         top: 0;
         left: 0;
