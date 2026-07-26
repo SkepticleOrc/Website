@@ -38,14 +38,58 @@ header {
 }
 
 /* ============================
+                START
+   ABOUT ME PAGE CONTENT LAYOUT
+   ============================ */
+
+.about-me {
+    max-width: 750px;         /* Prevents long lines, making it comfortable to read */
+    margin: 80px auto;        /* Margins push it away from fixed nav and centers it */
+    padding: 40px;            /* Inner spacing so text doesn't touch layout borders */
+    background-color: rgba(18, 18, 18, 0.85); /* Slightly transparent dark tile */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Crisp, subtle border edge */
+    border-radius: 8px;       /* Smooth, rounded corners */
+    backdrop-filter: blur(10px); /* Blurs out your wallpaper image underneath */
+    font-family: "Inter", sans-serif;
+}
+
+/* Section Headings */
+.about-me h3 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* Paragraph spacing and typography */
+.about-me p {
+    font-size: 16px;
+    line-height: 1.7;         /* Adds breathing room between text lines */
+    color: #cccccc;           /* Softer white text for reduced eye strain */
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* ============================
+                END
+   ABOUT ME PAGE CONTENT LAYOUT
+   ============================ */
+
+.add-content-here{
+    margin-top: 60px;
+}
+
+/* ============================
    NAVIGATION BAR (DESKTOP)
    ============================ */
 
 nav {
-    background-color: rgba(0, 0, 0, 0.5); /* if you want tansparent, change the 1.0 value */
+    background-color: rgba(0, 0, 0, 1.0); /* if you want tansparent, change the 1.0 value */
     color: #ffffff;
     padding: 15px 0;                     /* Vertical spacing */
-    position: absolute;                  /* IMPORTANT: anchors hamburger & dark button */
+    position: relative;                  /* IMPORTANT: anchors hamburger & dark button */
     width: 100%;
     backdrop-filter: blur(5px);         /* Frosted glass effect */
     z-index: 1;
@@ -90,6 +134,7 @@ nav {
     width: 100vw; /* Full width */
     height: auto;
     display: block;
+    margin-top: 0;
 }
 
 .logo {
@@ -180,8 +225,36 @@ nav {
                             MOBILE SECTION (START)
    RULES APPLY TO MOBILE DEVICES WITH A SCREEN WIDTH SMALLER THAN 600PX
    ==================================================================== */
+/* TABLET & MID-SIZE SCREEN ZONE (Fixes the 601px - 1120px stretch) */
+@media (max-width: 1120px) {
+  /* Future tablet adjustments for headers, text sizes, or grids go here */
+    }
 
 @media (max-width: 600px){
+
+
+/* ================================================================ 
+    Mobile styling rules for the "About Me" page and text elements 
+   ================================================================ */
+    .about-me {
+        margin: 90px 15px 40px 15px; /* Adds 15px safety side margins on small touchscreens */
+        padding: 20px;               /* Squeezes padding down so text has max room on phones */
+        max-width: 100%;             /* Allows the card to fill the available mobile width */
+    }
+
+    .about-me h3 {
+        font-size: 16px;             /* Scales the section headings down slightly for mobile screens */
+        margin-top: 20px;            /* Reduces top gap on smaller viewports */
+        margin-bottom: 10px;         /* Tightens heading spacing */
+        text-align: center;
+    }
+
+    .about-me p {
+        font-size: 14px;             /* Lowers body text size down from 16px to fit mobile screen frames */
+        line-height: 1.6;            /* Keeps paragraphs highly readable without taking up too much vertical space */
+        margin-bottom: 15px;         /* Uniform mobile paragraph breaks */
+        text-align: justify;
+    }
 
      html {
         background-color: #000;
