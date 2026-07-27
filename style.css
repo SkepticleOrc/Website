@@ -2,39 +2,42 @@
    GLOBAL PAGE COLOURS & LAYOUT
    ============================ */
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* Light mode (default) */
 body {
-    background-color: #ffffff;   /* White background */
-    color: #000000;              /* Black text */
-    margin: 0;                   /* Remove default browser margin */
-    display: flex;               /* Allows footer to stick to bottom */
-    flex-direction: column;      /* Stack content vertically */
-    min-height: 100dvh;          /* Full viewport height, mobile-safe */
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text */
+  margin: 0; /* Remove default browser margin */
+  display: flex; /* Allows footer to stick to bottom */
+  flex-direction: column; /* Stack content vertically */
+  min-height: 100dvh; /* Full viewport height, mobile-safe */
 }
 
 /* Dark mode (activated when JS adds .dark-mode) */
 body.dark-mode {
-    background-color: #000000;   /* Black background */
-    color: #ffffff;              /* White text */
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
 }
 
 /* Prevent horizontal scrolling */
-html, body {
-    overflow-x: hidden;
-    height: 100%;
-    margin: 0;
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
 }
 
 main {
-    flex: 1; /* Pushes footer to bottom */
+  flex: 1; /* Pushes footer to bottom */
 }
 
 header {
-    position: relative;
+  position: relative;
 }
 
 /* ============================
@@ -43,33 +46,33 @@ header {
    ============================ */
 
 .about-me {
-    max-width: 750px;         /* Prevents long lines, making it comfortable to read */
-    margin: 80px auto;        /* Margins push it away from fixed nav and centers it */
-    padding: 40px;            /* Inner spacing so text doesn't touch layout borders */
-    background-color: rgba(18, 18, 18, 0.85); /* Slightly transparent dark tile */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Crisp, subtle border edge */
-    border-radius: 8px;       /* Smooth, rounded corners */
-    backdrop-filter: blur(10px); /* Blurs out your wallpaper image underneath */
-    font-family: "Inter", sans-serif;
+  max-width: 750px; /* Prevents long lines, making it comfortable to read */
+  margin: 80px auto; /* Margins push it away from fixed nav and centers it */
+  padding: 40px; /* Inner spacing so text doesn't touch layout borders */
+  background-color: rgba(18, 18, 18, 0.85); /* Slightly transparent dark tile */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Crisp, subtle border edge */
+  border-radius: 8px; /* Smooth, rounded corners */
+  backdrop-filter: blur(10px); /* Blurs out your wallpaper image underneath */
+  font-family: "Inter", sans-serif;
 }
 
 /* Section Headings */
 .about-me h3 {
-    font-size: 20px;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-    text-align: center;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-align: center;
 }
 
 /* Paragraph spacing and typography */
 .about-me p {
-    font-size: 16px;
-    line-height: 1.7;         /* Adds breathing room between text lines */
-    color: #cccccc;           /* Softer white text for reduced eye strain */
-    margin-bottom: 20px;
-    text-align: justify;
+  font-size: 16px;
+  line-height: 1.7; /* Adds breathing room between text lines */
+  color: #cccccc; /* Softer white text for reduced eye strain */
+  margin-bottom: 20px;
+  text-align: justify;
 }
 
 /* ============================
@@ -77,8 +80,8 @@ header {
    ABOUT ME PAGE CONTENT LAYOUT
    ============================ */
 
-.add-content-here{
-    margin-top: 60px;
+.add-content-here {
+  margin-top: 60px;
 }
 
 /* ============================
@@ -86,144 +89,137 @@ header {
    ============================ */
 
 nav {
-    background-color: rgba(0, 0, 0, 1.0); /* if you want tansparent, change the 1.0 value */
-    color: #ffffff;
-    padding: 15px 0;                     /* Vertical spacing */
-    position: relative;                  /* IMPORTANT: anchors hamburger & dark button */
-    width: 100%;
-    backdrop-filter: blur(5px);         /* Frosted glass effect */
-    z-index: 1;
+  background-color: rgba(0, 0, 0, 1); /* if you want tansparent, change the 1.0 value */
+  color: #ffffff;
+  padding: 15px 0; /* Vertical spacing */
+  position: relative; /* IMPORTANT: anchors hamburger & dark button */
+  width: 100%;
+  backdrop-filter: blur(5px); /* Frosted glass effect */
+  z-index: 1;
 }
 
 /* Nav links */
 .navi a {
-    text-decoration: none;
-    color: inherit; /* Inherit white text */
+  text-decoration: none;
+  color: inherit; /* Inherit white text */
 }
 
 /* Desktop nav layout */
 .navi ul {
-    list-style: none;        /* Remove bullets */
-    padding: 0 0 0 80px;         /* Horizontal spacing */
-    margin: 0;
-    display: flex;           /* Horizontal menu */
-    align-items: center;
-    gap: 20px;               /* Space between items */
-    justify-content: left;   /* Align left */
-    flex-wrap: wrap;         /* Wrap if needed */
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    font-size: 16px;
+  list-style: none; /* Remove bullets */
+  padding: 0 0 0 80px; /* Horizontal spacing */
+  margin: 0;
+  display: flex; /* Horizontal menu */
+  align-items: center;
+  gap: 20px; /* Space between items */
+  justify-content: left; /* Align left */
+  flex-wrap: wrap; /* Wrap if needed */
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 16px;
 }
 
 /* Dark mode button (desktop) */
 .darkbutton {
-    position: absolute;  /* Float independently */
-    right: 20px;         /* Stick to right side */
-    top: 10px;           /* Align vertically */
-    z-index: 10;        /* Above nav */
-    background-color: rgb(255, 255, 255,);
-    color: #000;
-    padding: 8px 16px ;
-    height: auto;
-    border-radius: 20px;
-    border: none;
-
+  position: absolute; /* Float independently */
+  right: 20px; /* Stick to right side */
+  top: 10px; /* Align vertically */
+  z-index: 10; /* Above nav */
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  padding: 8px 16px;
+  height: auto;
+  border-radius: 20px;
+  border: none;
 }
-
 
 /* ============================
    WALLPAPER IMAGE
    ============================ */
 
 .Wallpaper {
-    width: 100vw; /* Full width */
-    height: auto;
-    display: block;
-    margin-top: 0;
+  width: 100vw; /* Full width */
+  height: auto;
+  display: block;
+  margin-top: 0;
 }
 
 .logo {
-
-    position: absolute;
-    left: 20px;
-    top: 5px;
-    z-index: 10;
-    width: 40px;   /* displayed size — much smaller than the actual 600x600 file */
-    height: 40px;
-    display: block;
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  z-index: 10;
+  width: 40px; /* displayed size — much smaller than the actual 600x600 file */
+  height: 40px;
+  display: block;
 }
-
-
 
 /* ============================
    FOOTER
    ============================ */
 
 .site-footer {
-    background: black;
-    color: #fff;
-    padding: 40px 0px;
-    display: flex;
-    justify-content: space-around;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    flex-wrap: wrap;
-    max-width: 100%;
-    flex-shrink: 0;
+  background: black;
+  color: #fff;
+  padding: 40px 0px;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  flex-wrap: wrap;
+  max-width: 100%;
+  flex-shrink: 0;
 }
 
 .footer-column {
-    min-width: 180px;
-    margin: 10px 0;
+  min-width: 180px;
+  margin: 10px 0;
 }
 
 .footer-column h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    border-bottom: 2px solid #555;
-    padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-bottom: 2px solid #555;
+  padding-bottom: 5px;
 }
 
 .footer-column ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-column ul li {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .footer-column ul li a {
-    color: #ccc;
-    text-decoration: none;
-    transition: 0.2s;
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.2s;
 }
 
 .footer-column ul li a:hover {
-    color: #fff;
-    text-decoration: underline;
+  color: #fff;
+  text-decoration: underline;
 }
-
 
 /* ============================
    HAMBURGER ICON (DESKTOP)
    ============================ */
 
 .hamburger {
-    display: none; /* Hidden on desktop */
-    cursor: pointer;
+  display: none; /* Hidden on desktop */
+  cursor: pointer;
 }
 
 .hamburger span {
-    display: block;
-    width: 28px;
-    height: 3px;
-    background: white;
-    margin: 6px 0;
-    transition: 0.3s;
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: white;
+  margin: 6px 0;
+  transition: 0.3s;
 }
-
 
 /* ====================================================================
                             MOBILE SECTION (START)
@@ -232,167 +228,167 @@ nav {
 /* TABLET & MID-SIZE SCREEN ZONE (Fixes the 601px - 1120px stretch) */
 /*@media (max-width: 1120px) {
   /* Future tablet adjustments for headers, text sizes, or grids go here */
-    /*}*/
+/*}*/
 
-@media (max-width: 600px){
-
-
-/* ================================================================ 
+@media (max-width: 600px) {
+  /* ================================================================ 
     Mobile styling rules for the "About Me" page and text elements 
    ================================================================ */
-    .about-me {
-        margin: 90px 15px 40px 15px; /* Adds 15px safety side margins on small touchscreens */
-        padding: 20px;               /* Squeezes padding down so text has max room on phones */
-        max-width: 100%;             /* Allows the card to fill the available mobile width */
-    }
+  .about-me {
+    margin: 90px 15px 40px 15px; /* Adds 15px safety side margins on small touchscreens */
+    padding: 20px; /* Squeezes padding down so text has max room on phones */
+    max-width: 100%; /* Allows the card to fill the available mobile width */
+  }
 
-    .about-me h3 {
-        font-size: 16px;             /* Scales the section headings down slightly for mobile screens */
-        margin-top: 20px;            /* Reduces top gap on smaller viewports */
-        margin-bottom: 10px;         /* Tightens heading spacing */
-        text-align: center;
-    }
+  .about-me h3 {
+    font-size: 16px; /* Scales the section headings down slightly for mobile screens */
+    margin-top: 20px; /* Reduces top gap on smaller viewports */
+    margin-bottom: 10px; /* Tightens heading spacing */
+    text-align: center;
+  }
 
-    .about-me p {
-        font-size: 14px;             /* Lowers body text size down from 16px to fit mobile screen frames */
-        line-height: 1.6;            /* Keeps paragraphs highly readable without taking up too much vertical space */
-        margin-bottom: 15px;         /* Uniform mobile paragraph breaks */
-        text-align: justify;
-    }
+  .about-me p {
+    font-size: 14px; /* Lowers body text size down from 16px to fit mobile screen frames */
+    line-height: 1.6; /* Keeps paragraphs highly readable without taking up too much vertical space */
+    margin-bottom: 15px; /* Uniform mobile paragraph breaks */
+    text-align: justify;
+  }
 
-     html {
-        background-color: #000;
-    }
+  html {
+    background-color: #000;
+  }
 
-    html, body {
-        margin: 0;
-        padding: 0;
-    }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
 
-    nav{
-        background-color: rgba(0, 0, 0, 1.0); /* if you want tansparent, change the 1.0 value */
-        backdrop-filter: none;     /* ← THIS removes the frosted bar */
-        position: fixed;
-        padding: 0px 0px 60px 0px;     /* padding-bottom: 60px; applied */
-        width: 100%;
-        top: 0;
-        left: 0;
-        overflow: visible;
-        border: none;              /* ← In case a border is showing */               
-        z-index: 1;
-    }
+  nav {
+    background-color: rgba(0, 0, 0, 1); /* if you want tansparent, change the 1.0 value */
+    backdrop-filter: none; /* ← THIS removes the frosted bar */
+    position: fixed;
+    padding: 0px 0px 60px 0px; /* padding-bottom: 60px; applied */
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: visible;
+    border: none; /* ← In case a border is showing */
+    z-index: 1;
+  }
 
-    .logo {
-        position: fixed;
-        left: 20px;
-        top: 15px;
-        z-index: 20;
-        width: 32px;   /* slightly smaller to fit the mobile bar comfortably */
-        height: 32px;
-        display: block;
-    }
+  .logo {
+    position: fixed;
+    left: 20px;
+    top: 15px;
+    z-index: 20;
+    width: 32px; /* slightly smaller to fit the mobile bar comfortably */
+    height: 32px;
+    display: block;
+  }
 
- 
-    /* Show hamburger on mobile */
-    .hamburger {
-        display: block;
-        position: fixed;
-        left: 0;
-        right: 0;
-        margin: 0 auto; 
-        top: 15px;
-        z-index: 20;
-        cursor: pointer;
-        width: 28px;
-    }   
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 15px;
+    z-index: 20;
+    cursor: pointer;
+    width: 28px;
+  }
 
-    /* Keep dark mode button on right */
-    .darkbutton {
-        position: fixed;
-        right: 20px;
-        top: 15px;
-        z-index: 20;
-        background-color: rgb(255, 255, 255,);
-        color: #000;
-        padding: 8px 16px;
-        height: auto;
-        border-radius: 20px;
-        border: none;
-    }
+  /* Keep dark mode button on right */
+  .darkbutton {
+    position: fixed;
+    right: 20px;
+    top: 15px;
+    z-index: 20;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    padding: 8px 16px;
+    height: auto;
+    border-radius: 20px;
+    border: none;
+  }
 
+  .navi {
+    display: none;
+  }
 
-    .navi {
-        display: none;
-    }
+  .navi.active {
+    display: block;
+    position: fixed;
+    top: 60px; /* sits right below the header */
+    left: 0;
+    width: 100%;
+  }
 
+  /* Hide nav menu until hamburger is clicked */
+  .navi ul {
+    display: none !important;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
 
-    .navi.active {
-        display: block;
-        position: fixed;
-        top: 60px; /* sits right below the header */
-        left: 0;
-        width: 100%;
-    }
+  /* When menu is active (JS toggles .active) */
+  .navi.active ul {
+    display: flex !important;
+  }
 
+  .navi a {
+    font-size: 14px;
+    padding: 0px 15px;
+  }
 
-    /* Hide nav menu until hamburger is clicked */
-    .navi ul { 
-        display: none !important;
-        flex-direction: column;
-        gap: 10px;
-        padding: 20px;
-        background: rgba(0,0,0,0.9);
-        width: 100%;
-        text-align: center;
-        z-index: 10;
-    }
+  /* Footer becomes vertical */
+  .site-footer {
+    border: none;
+    margin: 0;
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+  }
 
-  
-    /* When menu is active (JS toggles .active) */
-    .navi.active ul {
-        display: flex !important;
-    }
+  .site-footer h3 {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
 
-    .navi a { 
-        font-size: 14px;
-        padding: 0px 15px;
-    }
+  .site-footer li {
+    margin: 6px 0;
+  }
 
-    /* Footer becomes vertical */
-    .site-footer {
-        border: none;
-        margin: 0;
-        padding: 35px 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 25px;
-    }
+  .site-footer a {
+    font-size: 0.9rem;
+  }
 
-    .site-footer h3 {
-        margin-bottom: 10px;
-        font-size: 0.95rem;
-    }
+  body {
+    padding: 0px;
+  }
 
-    .site-footer li {
-        margin: 6px 0;
-    }
+  main {
+    margin: 0;
+    padding-top: 60px;
+  }
 
-    .site-footer a {
-        font-size: 0.9rem;
-    }
+  h1 {
+    font-size: 24px;
+  }
 
-    body { padding: 0px; }
-
-    main { 
-        margin: 0; 
-        padding-top: 60px;
-    }
-
-    h1 { font-size: 24px; }
-
-    p { font-size: 16px; }
+  p {
+    font-size: 16px;
+  }
 }
 
 /* ====================================================================
