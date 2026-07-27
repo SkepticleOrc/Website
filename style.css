@@ -121,8 +121,15 @@ nav {
 .darkbutton {
     position: absolute;  /* Float independently */
     right: 20px;         /* Stick to right side */
-    top: 15px;           /* Align vertically */
+    top: 10px;           /* Align vertically */
     z-index: 10;        /* Above nav */
+    background-color: rgb(255, 255, 255,);
+    color: #000;
+    padding: 8px 16px ;
+    height: auto;
+    border-radius: 20px;
+    border: none;
+
 }
 
 
@@ -143,9 +150,6 @@ nav {
     left: 20px;
     top: 5px;
     z-index: 10;
-}
-
-.logo img {
     width: 40px;   /* displayed size — much smaller than the actual 600x600 file */
     height: 40px;
     display: block;
@@ -226,9 +230,9 @@ nav {
    RULES APPLY TO MOBILE DEVICES WITH A SCREEN WIDTH SMALLER THAN 600PX
    ==================================================================== */
 /* TABLET & MID-SIZE SCREEN ZONE (Fixes the 601px - 1120px stretch) */
-@media (max-width: 1120px) {
+/*@media (max-width: 1120px) {
   /* Future tablet adjustments for headers, text sizes, or grids go here */
-    }
+    /*}*/
 
 @media (max-width: 600px){
 
@@ -283,15 +287,12 @@ nav {
         left: 20px;
         top: 15px;
         z-index: 20;
-    }
-
-    .logo img {
         width: 32px;   /* slightly smaller to fit the mobile bar comfortably */
         height: 32px;
         display: block;
     }
 
-
+ 
     /* Show hamburger on mobile */
     .hamburger {
         display: block;
@@ -305,23 +306,18 @@ nav {
         width: 28px;
     }   
 
-    /*.hamburger.active {
-        background-color: #000;
-        padding: 16px;
-        width: 100%;
-        top:0;
-        left: 0;
-    }*/
-
     /* Keep dark mode button on right */
     .darkbutton {
         position: fixed;
         right: 20px;
         top: 15px;
         z-index: 20;
-        background: none;
-        padding: 0;
+        background-color: rgb(255, 255, 255,);
+        color: #000;
+        padding: 8px 16px;
         height: auto;
+        border-radius: 20px;
+        border: none;
     }
 
 
