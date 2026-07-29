@@ -255,13 +255,19 @@ nav {
   }
 
   html {
-    background-color: #000;
+    background-color: #000000;
   }
 
   html,
   body {
     margin: 0;
     padding: 0;
+  }
+
+  /* Dark mode (activated when JS adds .dark-mode) */
+  body.dark-mode {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
   }
 
   nav {
@@ -314,16 +320,13 @@ nav {
     border: none;
   }
 
-  .navi {
-    display: none;
-  }
-
   .navi.active {
     display: block;
     position: fixed;
-    top: 60px; /* sits right below the header */
+    top: 0px; /* pinned to top of viewport */
     left: 0;
     width: 100%;
+    background: rgba(0, 0, 0, 1);
   }
 
   /* Hide nav menu until hamburger is clicked */
@@ -331,7 +334,7 @@ nav {
     display: none !important;
     flex-direction: column;
     gap: 10px;
-    padding: 20px;
+    padding: 60px;
     background: rgba(0, 0, 0, 0.9);
     width: 100%;
     text-align: center;
