@@ -1,0 +1,270 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+  overflow-x: hidden;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.skep-lab-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+}
+
+.skep-ul-nav {
+  top: 0px;
+  left: 15px;
+  display: flex;
+  gap: 20px;
+  width: auto;
+  padding: 15px;
+  list-style: none;
+  justify-content: left;
+}
+
+.skep-ul-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.skep-nav-logos {
+  display: flex;
+  padding-right: 10px;
+  gap: 1px;
+  align-items: center;
+}
+
+.skep-umbrella-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.skep-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.skep-background {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid red;
+  border-radius: 10px;
+  z-index: 2;
+  justify-content: center;
+}
+
+.skep-button-row-ark,
+.skep-button-row-hive,
+.skep-button-row-nest {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 5px;
+}
+
+.skep-button-tyrant-t103,
+.skep-button-hunter-alpha,
+.skep-button-under-taker,
+.skep-button-licker,
+.skep-button-g-adult,
+.skep-button-ivy-plant43,
+.skep-button-nemesis-t-type,
+.skep-button-leech-man,
+.skep-button-cerberus {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  font-size: 25px;
+  padding-bottom: 20px;
+  aspect-ratio: 1 / 1;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 10px;
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 10%;
+}
+
+.skep-button-tyrant-t103 {
+  background-image: url("images/tyrant.png");
+}
+.skep-button-hunter-alpha {
+  background-image: url("images/hunter-alpha.png");
+}
+
+.skep-button-under-taker {
+  background-image: url("images/under-taker.png");
+}
+.skep-button-licker {
+  background-image: url("images/licker.png");
+}
+
+.skep-button-g-adult {
+  background-image: url("images/g-adult.png");
+}
+
+.skep-button-ivy-plant43 {
+  background-image: url("images/ivy-plant43.png");
+}
+
+.skep-button-nemesis-t-type {
+  background-image: url("images/nemesis-t-type.png");
+}
+
+.skep-button-leech-man {
+  background-image: url("images/leech-man.png");
+}
+
+.skep-button-cerberus {
+  background-image: url("images/cerberus.png");
+}
+
+.skep-terminal-footer {
+  width: 100%;
+  padding: 20px;
+  background-color: #000;
+  border-top: 1px solid #222; /* Subtle separation line */
+  font-family: monospace;
+  font-size: 0.75rem; /* Keeps the text small and clean */
+  color: #666; /* Muted gray so it sits quietly in the background */
+  text-align: center;
+}
+
+.skep-footer-brand {
+  margin-bottom: 8px;
+  color: #999; /* Slightly brighter for your name */
+}
+
+/* 1. The Hiding Switch */
+.skep-modal-hidden {
+  display: none !important;
+}
+
+.skep-modal-active {
+  display: flex !important;
+}
+
+/* 2. The Full-Screen Backdrop Overlay */
+#skep-modal-overlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Dark transparent layer */
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Forces it to float over your monster buttons */
+}
+
+/* 3. The Umbrella Terminal Warning Box */
+#skep-modal-overlay .skep-terminal-box {
+  background-color: #050505;
+  border: 3px solid rgb(255, 0, 0); /* Umbrella Hazard Red */
+  border-radius: 10px;
+  padding: 30px;
+  text-align: left;
+  max-width: 400px;
+  width: 90%; /* Keeps it safe and responsive on 320px screens */
+  font-family: monospace;
+  color: white;
+}
+
+/* 4. Descendant Selectors for Internal Text Elements */
+#skep-modal-overlay h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+#skep-modal-overlay p {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* 5. The Terminal Dismiss Button */
+#skep-modal-overlay button {
+  display: block;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 40px auto 0;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .skep-lab-nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .skep-ul-nav {
+    left: 0;
+    padding: 5px;
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .skep-umbrella-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .skep-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skep-button-tyrant-t103,
+  .skep-button-hunter-alpha,
+  .skep-button-under-taker,
+  .skep-button-licker,
+  .skep-button-g-adult,
+  .skep-button-ivy-plant43,
+  .skep-button-nemesis-t-type,
+  .skep-button-leech-man,
+  .skep-button-cerberus {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 12px;
+    padding: 0;
+  }
+}
+
+

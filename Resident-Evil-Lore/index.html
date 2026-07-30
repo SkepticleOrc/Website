@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resident Evil project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="skep-lab-nav">
+        <ul class="skep-ul-nav">
+          <li><a href="../index.html">MENU</a></li>
+          <li><a href="#" id="skep-link-ark">ARK</a></li>
+          <li><a href="#" id="skep-link-nest">NEST</a></li>
+          <li><a href="#" id="skep-link-hive">HIVE</a></li>
+        </ul>
+        <div class="skep-nav-logos">
+          <img class="skep-umbrella-logo" src="images/umbrella-logo.png" alt="Umbrella Logo" />
+          <img class="skep-logo" src="images/skep-logo.png" alt="SKEP Logo" />
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <img class="skep-background" src="images/umbrella.png" alt="Terminal Backdrop" />
+      </section>
+
+      <!-- Row 1: ARK Sector -->
+      <section>
+        <div class="skep-button-row-ark">
+          <div class="skep-button-tyrant-t103">Tyrant (T-103)</div>
+          <div class="skep-button-hunter-alpha">Hunter (Alpha)</div>
+          <div class="skep-button-under-taker">Under Taker</div>
+        </div>
+      </section>
+
+      <!-- Row 2: NEST Sector -->
+      <section>
+        <div class="skep-button-row-nest">
+          <div class="skep-button-licker">The Licker</div>
+          <div class="skep-button-g-adult">G-Adult</div>
+          <div class="skep-button-ivy-plant43">Ivy (Plant 43)</div>
+        </div>
+      </section>
+
+      <!-- Row 3: THE HIVE Sector -->
+      <section>
+        <div class="skep-button-row-hive">
+          <div class="skep-button-nemesis-t-type">Nemesis (T-Type)</div>
+          <div class="skep-button-leech-man">Leech Man</div>
+          <div class="skep-button-cerberus">Cerberus</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="skep-terminal-footer">
+      <div class="skep-footer-brand">
+        <p>© 2026 SKEP DEVELOPMENTS. All Rights Reserved.</p>
+      </div>
+      <div class="skep-footer-disclaimer">
+        <p>
+          Disclaimer: This is a non-commercial, fan-made portfolio project created strictly for educational and web development demonstration
+          purposes. All characters, names, imagery, and related lore are trademarks and copyright of Capcom.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Universal Dynamic Warning Interface Layer -->
+    <div id="skep-modal-overlay" class="skep-modal-hidden">
+      <div class="skep-terminal-box">
+        <h2 id="skep-modal-title">SYSTEM ALERT</h2>
+        <p id="skep-modal-text">Security clearance required.</p>
+        <button id="skep-modal-close">DISMISS ALERT</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
