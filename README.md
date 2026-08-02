@@ -64,7 +64,7 @@ A defensive data page detailing my commitment to web safety. This website delibe
 
 ## 🏆 Current Academic & Career Strategy
 
-- **Target:** To work relentlessly through the Open University curriculum to achieve a **First-Class Honours degree (1st)**.
+- **Target:** To work relentlessly through the Open University curriculum to achieve my **BSC Honours degree in Computing & IT (Software)**.
 
 - **Method:** Capitalize on the lower grade-pressure of Stage 1 modules to build deep side-projects under the **SkepticleOrc** studio banner, ensuring a massive practical headstart before Stage 2 and Stage 3 scaling algorithms kick in.
 
