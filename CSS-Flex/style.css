@@ -1,0 +1,158 @@
+:root {
+  /*================================*/
+  /*MAIN NAV ROOT VALUES*/
+  --skep-main-nav-border: 2px solid #bffcf9;
+  /*================================*/
+
+  /*================================*/
+  /*SKEP-FLEX-TEST1 NAV ROOT VALUES*/
+  --skep-test-flex1-bg-color: #4b4a54;
+  --skep-test-flex1-text-color: white;
+  --skep-test-flex1-nav-border: 2px solid aqua;
+  /*================================*/
+
+  /*================================*/
+  /*SKEP-FLEX-TEST2 NAV ROOT VALUES*/
+  --skep-test-flex2-bg-color: #cf9eac;
+  --skep-test-flex2-text-color: white;
+  --skep-test-flex2-nav-border: 2px solid #ff3300;
+  /*================================*/
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+/*------------------------------------------------------*/
+/*MAIN NAV SECTION START
+/*------------------------------------------------------*/
+
+/*NAV BAR CONTAINER*/
+.skep-main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 201, 200, 0.8);
+  padding-left: 10px;
+  border-bottom: var(--skep-main-nav-border);
+}
+
+/*Nav LOGO POSITION*/
+.skep-main-nav-logo img {
+  width: 50px;
+  height: auto;
+}
+/*------------------------------------------------------*/
+/*MAIN NAV SECTION END
+/*------------------------------------------------------*/
+
+/*------------------------------------------------------*/
+/*TEST SECTION START : FLEX-TEST-1 & 2*/
+/*------------------------------------------------------*/
+
+.skep-flex-test-1,
+.skep-flex-test-2 {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.skep-flex-test-1 {
+  background-color: var(--skep-test-flex1-bg-color);
+  color: var(--skep-test-flex1-text-color);
+  border: var(--skep-test-flex1-nav-border);
+}
+
+.skep-flex-test-2 {
+  background-color: var(--skep-test-flex2-bg-color);
+  color: var(--skep-test-flex2-text-color);
+  border: var(--skep-test-flex2-nav-border);
+}
+
+.skep-f-link,
+.skep-f-link2 {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+.skep-f-link-logo,
+.skep-f-link-logo2 {
+  margin-left: auto;
+}
+
+.skep-f-link-logo img,
+.skep-f-link-logo2 img {
+  width: 50px;
+  height: auto;
+}
+
+/*------------------------------------------------------*/
+/*TEST SECTION END : FLEX-TEST-1 & 2*/
+/*------------------------------------------------------*/
+
+/*------------------------------------------------------*/
+/*MOBILE SECTION START
+/*------------------------------------------------------*/
+@media (max-width: 150px) {
+  /*I see you ;)*/
+
+  .skep-flex-test-1,
+  .skep-flex-test-2 {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    padding-left: 5px;
+  }
+
+  .skep-flex-test-1 {
+    background-color: #4b4a54;
+    border: solid 2px aqua;
+  }
+
+  .skep-flex-test-2 {
+    background-color: #cf9eac;
+    border: solid 2px #ff3300;
+  }
+
+  .skep-f-link,
+  .skep-f-link2 {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    margin-right: 0;
+    font-size: 3.5px;
+  }
+
+  .skep-f-link-logo img,
+  .skep-f-link-logo2 img {
+    width: 20px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .skep-main-nav {
+    justify-content: center;
+  }
+
+  .skep-f-link,
+  .skep-f-link2 {
+    display: flex;
+    color: white;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+}
+/*------------------------------------------------------*/
+/*MOBILE SECTION END
+/*------------------------------------------------------*/
