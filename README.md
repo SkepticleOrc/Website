@@ -6,6 +6,10 @@ This project is built from scratch using raw HTML and custom CSS, completely avo
 
 ## 🚀 Recent Architecture Upgrades (27 July 2026 - 03 August 2026)
 
+- New project: CSS Flex update. (02/08/2026)
+
+- New project: Resident evil lore update. (31/07/2026)
+
 - Major structural overhaul squashing lingering layout bugs.
 
 - Expand the directory with clean, modular pages.
