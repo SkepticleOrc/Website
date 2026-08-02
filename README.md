@@ -80,7 +80,7 @@ A defensive data page detailing my commitment to web safety. This website delibe
 - **MDN** - https://developer.mozilla.org/en-US/ Used as a Main developer hub.
 - **MJS** - https://javascript.info/ Used for Modern Javascrtipt concepts.
 - **Caniuse** - https://caniuse.com/ Used to check what elements work in which browsers.
-- **Claude AI** - https://claude.ai/ Used to help code and debug css currrently but wil use with Javascript eventually.
+- **Claude AI** - https://claude.ai/ Used to help debug if I have issues that I can’t seem to fix. It is used more as an assistant rather writing code.
 - **ColorSpace** - https://mycolor.space/ Used to color match themes and website styles.
 - **Code Formatting:** Prettier (VS Code extension), configured via `.prettierrc` for consistent style across the project.
 - **Local Development Server:** Live Server (VS Code extension), providing instant auto-refresh on save for faster local testing
