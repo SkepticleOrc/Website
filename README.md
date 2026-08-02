@@ -44,7 +44,7 @@ The application structure has been modularized into separate, dedicated files to
 
 The main gateway of the site utilizing an animated mobile menu overlay and custom JavaScript state management to toggle fluid dark mode themes.
 
-### 2. About Me / SkepticleOrc Origins (`about.html`)
+### 2. About Me (`about.html`)
 
 A deeply personal, honest narrative bridging my background in high-pressure public services (Security and Prison Services) to my lifelong 19-year curiosity for digital building. It details my evolution from writing basic text layouts in Windows Notepad at age 16, to modding video games, and launching a live project on Roblox.
 
