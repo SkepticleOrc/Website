@@ -1,6 +1,6 @@
-<p align="center"> 
+> 
 
-# 🔧 Full Codebase Change Log (HTML / CSS / JS)
+<p align="center" # 🔧 Full Codebase Change Log (HTML / CSS / JS)</p>
 - Repository Opened: 24/07/2026
 - Repository Updated: 03/08/2026
 ----------------------------------------------------------------
@@ -164,4 +164,4 @@ Ensures each component behaves independently without global conflicts.
 - **Configured .prettierrc:** 150 Char Consistent styling.
 - **Local Development Server:** Live Server (VS Code extension).
 
-</p>
+
