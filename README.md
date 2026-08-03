@@ -1,129 +1,97 @@
-> 
-
 # 🔧 Full Codebase Change Log (HTML / CSS / JS)
 - Repository Opened: 24/07/2026
 - Repository Updated: 03/08/2026
 ----------------------------------------------------------------
-# 📄 HTML Changes
+## 📄 HTML Changes
 
-- 🟦 Wallpaper System Migration
-Replaced <img class="Wallpaper"> with <div class="skep-Wallpaper"></div>.
+🟦 Wallpaper System Migration
+- Replaced `<img class="Wallpaper">` with `<div class="skep-Wallpaper"></div>`.
+- Introduced .skep-wallpaper-container hero structure.
+- Removed ~10 lines of redundant HTML wrappers.
+- Added centered overlay elements: .skep-banner and .skep-h1.
 
-Introduced .skep-wallpaper-container hero structure.
+🟦 Logo Class Renaming
+- Updated .logo → .skep-logo for naming consistency.
 
-Removed ~10 lines of redundant HTML wrappers.
+🟦 Navigation Cleanup
+- Removed unnecessary wrapper `<div>` elements.
+- Cleaned up `<nav>` structure and link lists.
+- Updated directory links (e.g., designs.html → practice.html).
 
-Added centered overlay elements: .skep-banner and .skep-h1.
+🟦 Direct Class Assignment
+- Removed redundant `<div>` wrappers by applying classes directly to elements.
 
-- 🟦 Logo Class Renaming
-Updated .logo → .skep-logo for naming consistency.
-
-- 🟦 Navigation Cleanup
-Removed unnecessary wrapper <div> elements.
-
-Cleaned up <nav> structure and link lists.
-
-Updated directory links (e.g., designs.html → practice.html).
-
-- 🟦 Direct Class Assignment
-Removed redundant <div> wrappers by applying classes directly to elements.
-
-- 🟦 Directory Expansion
-Added new pages: component-lab.html, study-log.html, privacy.html.
+🟦 Directory Expansion
+- Added new pages: component-lab.html, study-log.html, privacy.html.
 
 ----------------------------------------------------------------
 # 🎨 CSS Changes
 
+🟩 Wallpaper Component Overhaul
+- Removed legacy .Wallpaper image rules.
+- Added new hero component CSS:
+- .skep-wallpaper-container
+- .skep-Wallpaper
+- .skep-banner
+- .skep-h1
 
-- 🟩 Wallpaper Component Overhaul
-Removed legacy .Wallpaper image rules.
+🟩 Height Logic Correction
+- Replaced height: 100% with height: 100vh for full-screen hero behaviour.
 
-Added new hero component CSS:
+🟩 Width Simplification
+- Removed redundant width: 100% from block-level containers.
 
-.skep-wallpaper-container
+🟩 Removal of All !important Rules
+- Layout now behaves naturally without forced overrides.
 
-.skep-Wallpaper
+🟩 Root Variables Introduced
+- :root { --skep-border: 2px solid gray; }
 
-.skep-banner
+🟩 Navigation Bar Improvements
+- Desktop nav remains in normal flow (position: relative).
+- Mobile nav now uses position: fixed with proper padding offsets.
+- Removed leftover margin-top from mobile dropdown.
 
-.skep-h1
+🟩 Logo & Dark Mode Button Positioning
+- Both now use position: absolute inside the header for consistent placement.
 
-- 🟩 Height Logic Correction
-Replaced height: 100% with height: 100vh for full-screen hero behaviour.
+🟩 Footer Border Upgrade
+- Footer now uses border-top: var(--skep-border).
 
-- 🟩 Width Simplification
-Removed redundant width: 100% from block-level containers.
+🟩 Mobile Layout Fixes
+- Cleaned spacing and padding.
+- Fixed overlay stacking (z-index upgrades).
+- Ensured hero section renders correctly under fixed nav.
 
-- 🟩 Removal of All !important Rules
-Layout now behaves naturally without forced overrides.
+🟩 Wallpaper Component
+- Background layer uses inset: 0 instead of four separate positioning rules.
+- Z-index layering: - Wallpaper: 0 - Banner: 1 - Title: 2
+- Removed redundant width definitions.
 
-- 🟩 Root Variables Introduced
-:root {
-  --skep-border: 2px solid gray;
-}
-
-- 🟩 Navigation Bar Improvements
-Desktop nav remains in normal flow (position: relative).
-
-Mobile nav now uses position: fixed with proper padding offsets.
-
-Removed leftover margin-top from mobile dropdown.
-
-- 🟩 Logo & Dark Mode Button Positioning
-Both now use position: absolute inside the header for consistent placement.
-
-- 🟩 Footer Border Upgrade
-Footer now uses border-top: var(--skep-border).
-
-- 🟩 Mobile Layout Fixes
-Cleaned spacing and padding.
-
-Fixed overlay stacking (z-index upgrades).
-
-Ensured hero section renders correctly under fixed nav.
-
-- 🟩 Wallpaper Component
-
-Background layer uses inset: 0 instead of four separate positioning rules.
-
-Z-index layering:
-
-Wallpaper: 0
-
-Banner: 1
-
-Title: 2
-
-Removed redundant width definitions.
-
-- 🟩 Legacy CSS Removal
-Removed ~15 lines of outdated CSS.
+🟩 Legacy CSS Removal
+- Removed ~15 lines of outdated CSS.
 
 ----------------------------------------------------------------
-# ⚙️ JavaScript Changes**
+# ⚙️ JavaScript Changes
 
-- 🟫 Mobile Menu State Management
-Improved JS toggle logic for mobile menu overlay.
+🟫 Mobile Menu State Management
+- Improved JS toggle logic for mobile menu overlay.
+- Ensures menu opens and closes cleanly without leftover spacing.
 
-Ensures menu opens and closes cleanly without leftover spacing.
+🟫 Dark Mode Toggle Stability
+- JS now interacts correctly with the repositioned .skep-logo and .dark-mode-btn.
+- No more layout jumps when toggling themes.
 
-- 🟫 Dark Mode Toggle Stability
-JS now interacts correctly with the repositioned .skep-logo and .dark-mode-btn.
-
-No more layout jumps when toggling themes.
-
-- 🟫 Navigation Behaviour
-JS now respects the fixed mobile nav height.
-
-Prevents content from sliding underneath the bar.
-
-- 🟫 Component Lab Integration
-JS prepared for isolated UI components (sliders, modals, toggles).
-
-Ensures each component behaves independently without global conflicts.
+🟫 Navigation Behaviour
+- JS now respects the fixed mobile nav height.
+- Prevents content from sliding underneath the bar.
+  
+🟫 Component Lab Integration
+- JS prepared for isolated UI components (sliders, modals, toggles).
+- Ensures each component behaves independently without global conflicts.
 
 ----------------------------------------------------------------
-## 🏁 Summary of All Changes 27
+# 🏁 Summary of All Changes 27
 
 - Wallpaper system replaced
 - HTML structure cleaned
@@ -148,7 +116,7 @@ Ensures each component behaves independently without global conflicts.
 - JS dark mode behaviour improved
 - JS component lab prepared
 ----------------------------------------------------------------
-## 🎨 Tech Stack & Tools
+# 🎨 Tech Stack & Tools
 
 - **Languages:** Semantic HTML5, Vanilla CSS3 & Javascript.
 - **Debugging & Inspecting:** Google Chrome Developer Tools.
