@@ -261,6 +261,8 @@ nav {
                             MOBILE SECTION (START)
    RULES APPLY TO MOBILE DEVICES WITH A SCREEN WIDTH SMALLER THAN 600PX
    ==================================================================== */
+@media screen and (min-width: 601px) and (max-width: 1200px){
+}
 
 @media (max-width: 600px) {
   /* ================================================================ 
