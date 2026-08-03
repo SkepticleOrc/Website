@@ -1,4 +1,4 @@
-<div align="justify"> 
+<div text-align="center"> 
 
 # 🔧 Full Codebase Change Log (HTML / CSS / JS)
 - Repository Opened: 24/07/2026
