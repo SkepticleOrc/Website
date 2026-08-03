@@ -43,8 +43,14 @@ body {
   border-bottom: var(--skep-main-nav-border);
 }
 
+.skep-nav-button {
+  position: absolute;
+  left: 10px;
+}
+
 /*Nav LOGO POSITION*/
-.skep-main-nav-logo img {
+.skep-main-nav-logo img,
+.skep-nav-button img {
   width: 50px;
   height: auto;
 }

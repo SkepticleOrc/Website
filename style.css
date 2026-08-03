@@ -1,11 +1,63 @@
-/* ============================
-   GLOBAL PAGE COLOURS & LAYOUT
-   ============================ */
+/* =======================================================
+                        ROOT PROPERTIES START
+   ======================================================= */
+:root {
+  --skep-border: 2px solid gray;
+}
+/* =======================================================
+                        ROOT PROPERTIES END
+   ======================================================= */
+/*========================================================
 
-*,
-*::before,
-*::after {
+/*========================================================*/
+/* =======================================================
+                        GLOBAL PROPERTIES START
+   ======================================================= */
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* =======================================================
+                        GLOBAL PROPERTIES END
+   ======================================================= */
+
+.skep-wallpaper-container {
+  position: relative;
+  height: 100vh;
+}
+
+.skep-Wallpaper {
+  position: absolute;
+  inset: 0; /*MEANS TOP,LEFT,RIGHT, BOTTOM = 0*/
+  background-image: url("images/Wallpaper.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /*PUTS WALLPAPER BEHIND BANNER*/
+}
+
+.skep-banner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 50px;
+  z-index: 0; /*PUTS BANNER OVER THE TOP OF WALLPAPER*/
+}
+
+.skep-h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /*BRINGS THE TEXT ABOVE THE BANNER*/
+}
+
+.skep-h1 h1 {
+  margin: 0;
+  color: white;
 }
 
 /* Light mode (default) */
@@ -80,10 +132,6 @@ header {
    ABOUT ME PAGE CONTENT LAYOUT
    ============================ */
 
-.add-content-here {
-  margin-top: 60px;
-}
-
 /* ============================
    NAVIGATION BAR (DESKTOP)
    ============================ */
@@ -96,6 +144,7 @@ nav {
   width: 100%;
   backdrop-filter: blur(5px); /* Frosted glass effect */
   z-index: 1;
+  border-bottom: var(--skep-border);
 }
 
 /* Nav links */
@@ -138,14 +187,7 @@ nav {
    WALLPAPER IMAGE
    ============================ */
 
-.Wallpaper {
-  width: 100vw; /* Full width */
-  height: auto;
-  display: block;
-  margin-top: 0;
-}
-
-.logo {
+.skep-logo {
   position: absolute;
   left: 20px;
   top: 5px;
@@ -169,6 +211,7 @@ nav {
   flex-wrap: wrap;
   max-width: 100%;
   flex-shrink: 0;
+  border-top: var(--skep-border);
 }
 
 .footer-column {
@@ -225,10 +268,6 @@ nav {
                             MOBILE SECTION (START)
    RULES APPLY TO MOBILE DEVICES WITH A SCREEN WIDTH SMALLER THAN 600PX
    ==================================================================== */
-/* TABLET & MID-SIZE SCREEN ZONE (Fixes the 601px - 1120px stretch) */
-/*@media (max-width: 1120px) {
-  /* Future tablet adjustments for headers, text sizes, or grids go here */
-/*}*/
 
 @media (max-width: 600px) {
   /* ================================================================ 
@@ -254,6 +293,39 @@ nav {
     text-align: justify;
   }
 
+  .skep-wallpaper-container {
+    position: relative;
+    height: 100vh;
+  }
+
+  .skep-Wallpaper {
+    position: absolute;
+    inset: 0; /*MEANS TOP,LEFT,RIGHT, BOTTOM = 0*/
+    background-image: url("images/Wallpaper.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 0; /*PUTS WALLPAPER BEHIND BANNER*/
+  }
+
+  .skep-banner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 50px;
+    z-index: 1; /*PUTS BANNER OVER THE TOP OF WALLPAPER*/
+  }
+
+  .skep-h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /*BRINGS THE TEXT ABOVE THE BANNER*/
+  }
+
   html {
     background-color: #000000;
   }
@@ -274,7 +346,7 @@ nav {
     background-color: rgba(0, 0, 0, 1); /* if you want tansparent, change the 1.0 value */
     backdrop-filter: none; /* ← THIS removes the frosted bar */
     position: fixed;
-    padding: 0px 0px 60px 0px; /* padding-bottom: 60px; applied */
+    padding: 0 0 60px 0; /* padding-bottom: 60px; applied */
     width: 100%;
     top: 0;
     left: 0;
@@ -283,7 +355,7 @@ nav {
     z-index: 1;
   }
 
-  .logo {
+  .skep-logo {
     position: fixed;
     left: 20px;
     top: 15px;
@@ -326,29 +398,30 @@ nav {
     top: 0px; /* pinned to top of viewport */
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    padding: 0;
   }
 
   /* Hide nav menu until hamburger is clicked */
   .navi ul {
-    display: none !important;
+    display: none ;
     flex-direction: column;
-    gap: 10px;
-    padding: 60px;
-    background: rgba(0, 0, 0, 0.9);
+    gap: 5px;
     width: 100%;
     text-align: center;
     z-index: 10;
+    padding:60px 0 5px 0; /*ALTERS MOBILE HAMBURGER LINK STRUCTURE*/
   }
 
   /* When menu is active (JS toggles .active) */
   .navi.active ul {
-    display: flex !important;
+    display: flex ;
   }
 
   .navi a {
     font-size: 14px;
-    padding: 0px 15px;
+    padding: 0 15px;
   }
 
   /* Footer becomes vertical */
