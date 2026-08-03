@@ -69,6 +69,7 @@ body {
   display: flex; /* Allows footer to stick to bottom */
   flex-direction: column; /* Stack content vertically */
   min-height: 100dvh; /* Full viewport height, mobile-safe */
+  touch-action: pan-x pan-y; /*Stops pinch - zoom on safari misaligning content*/
 }
 
 /* Dark mode (activated when JS adds .dark-mode) */
@@ -472,6 +473,7 @@ nav {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    box-sizing: border-box;
   }
 }
 /* ====================================================================
