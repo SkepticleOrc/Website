@@ -258,214 +258,6 @@ nav {
 }
 
 /* ====================================================================
-                            TABLET SECTION (START)
-   ==================================================================== */
-@media screen and (min-width: 601px) and (max-width: 1200px) {
-  .about-me {
-    margin: 90px 15px 40px 15px; /* Adds 15px safety side margins on small touchscreens */
-    padding: 20px; /* Squeezes padding down so text has max room on phones */
-    max-width: 100%; /* Allows the card to fill the available mobile width */
-  }
-
-  .about-me h3 {
-    font-size: 16px; /* Scales the section headings down slightly for mobile screens */
-    margin-top: 20px; /* Reduces top gap on smaller viewports */
-    margin-bottom: 10px; /* Tightens heading spacing */
-    text-align: center;
-  }
-
-  .about-me p {
-    font-size: 14px; /* Lowers body text size down from 16px to fit mobile screen frames */
-    line-height: 1.6; /* Keeps paragraphs highly readable without taking up too much vertical space */
-    margin-bottom: 15px; /* Uniform mobile paragraph breaks */
-    text-align: justify;
-  }
-
-  .skep-wallpaper-container {
-    position: relative;
-    height: 100vh;
-  }
-
-  .skep-Wallpaper {
-    position: absolute;
-    inset: 0; /*MEANS TOP,LEFT,RIGHT, BOTTOM = 0*/
-    background-image: url("images/Wallpaper.png");
-    background-size: cover;
-    background-position: center;
-    z-index: 0; /*PUTS WALLPAPER BEHIND BANNER*/
-  }
-
-  .skep-banner {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 50px;
-    z-index: 1; /*PUTS BANNER OVER THE TOP OF WALLPAPER*/
-  }
-
-  .skep-h1 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2; /*BRINGS THE TEXT ABOVE THE BANNER*/
-  }
-
-  html {
-    background-color: #000000;
-  }
-
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Dark mode (activated when JS adds .dark-mode) */
-  body.dark-mode {
-    background-color: #000000; /* Black background */
-    color: #ffffff; /* White text */
-  }
-
-  nav {
-    background-color: rgba(0, 0, 0, 0.6); /* if you want tansparent, change the 1.0 value */
-    backdrop-filter: none; /* ← THIS removes the frosted bar */
-    position: var(--skep-pos);
-    padding: 0 0 60px 0; /* padding-bottom: 60px; applied */
-    width: 100%;
-    top: 0;
-    left: 0;
-    overflow: visible;
-    border: none; /* ← In case a border is showing */
-    z-index: 3;
-  }
-
-  .mobile-nav-bg-color {
-    position: var(--skep-pos);
-    inset: 0 0 auto 0;
-    background-color: #000;
-    height: 60px;
-  }
-
-  .skep-logo {
-    position: var(--skep-pos);
-    left: 20px;
-    top: 15px;
-    z-index: 20;
-    width: 32px; /* slightly smaller to fit the mobile bar comfortably */
-    height: 32px;
-    display: block;
-  }
-
-  /* Show hamburger on mobile */
-  .hamburger {
-    display: block;
-    position: var(--skep-pos);
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    top: 15px;
-    z-index: 3;
-    cursor: pointer;
-    width: 28px;
-  }
-
-  /* Keep dark mode button on right */
-  .darkbutton {
-    position: var(--skep-pos);
-    right: 20px;
-    top: 15px;
-    z-index: 3;
-    background-color: rgb(255, 255, 255);
-    color: #000;
-    padding: 8px 16px;
-    height: auto;
-    border-radius: 20px;
-    border: none;
-  }
-
-  .navi.active {
-    display: block;
-    position: var(--skep-pos);
-    top: 0px; /* pinned to top of viewport */
-    left: 0;
-    width: 100%;
-    z-index: 3;
-    padding: 0;
-  }
-
-  /* Hide nav menu until hamburger is clicked */
-  .navi ul {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    width: 100%;
-    text-align: center;
-    z-index: 3;
-    padding: 60px 0 5px 0; /*ALTERS MOBILE HAMBURGER LINK STRUCTURE*/
-  }
-
-  /* When menu is active (JS toggles .active) */
-  .navi.active ul {
-    display: flex;
-  }
-
-  .navi a {
-    font-size: 14px;
-    padding: 0 15px;
-  }
-
-  /* Footer becomes vertical */
-  .site-footer {
-    border: none;
-    margin: 0;
-    padding: 35px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 25px;
-  }
-
-  .site-footer h3 {
-    margin-bottom: 10px;
-    font-size: 0.95rem;
-  }
-
-  .site-footer li {
-    margin: 6px 0;
-  }
-
-  .site-footer a {
-    font-size: 0.9rem;
-  }
-
-  body {
-    padding: 0px;
-  }
-
-  main {
-    margin: 0;
-    padding-top: 60px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-}
-
-/* ====================================================================
-                            TABLET SECTION (END)
-   ==================================================================== */
-
-/* ====================================================================
                             PHONE SECTION (START)
    ==================================================================== */
 @media (max-width: 600px) {
@@ -671,4 +463,17 @@ nav {
 
 /* ====================================================================
                             MOBILE SECTION (END)
+   ==================================================================== */
+/* ====================================================================
+                            TABLET SECTION (START)
+   ==================================================================== */
+@media screen and (min-width: 601px) and (max-width: 1366px) {
+  .your-container-class {
+    width: 100%; /* Fills the parent element on smaller tablets */
+    max-width: 1200px; /* Caps the width on the iPad Pro 12.9 */
+    margin: 0 auto; /* Centers the container horizontally */
+  }
+}
+/* ====================================================================
+                            TABLET SECTION (END)
    ==================================================================== */
