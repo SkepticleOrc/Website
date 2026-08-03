@@ -1,4 +1,4 @@
-<div text-align="center"> 
+<p align="center"> 
 
 # 🔧 Full Codebase Change Log (HTML / CSS / JS)
 - Repository Opened: 24/07/2026
@@ -164,4 +164,4 @@ Ensures each component behaves independently without global conflicts.
 - **Configured .prettierrc:** 150 Char Consistent styling.
 - **Local Development Server:** Live Server (VS Code extension).
 
-</div>
+</p>
