@@ -467,11 +467,11 @@ nav {
 /* ====================================================================
                             TABLET SECTION (START)
    ==================================================================== */
-@media screen and (min-width: 601px) and (max-width: 1366px) {
+@media screen and (min-width: 601px) and (max-width: 1366px) and (orientation: landscape) {
   .your-container-class {
-    width: 100%; /* Fills the parent element on smaller tablets */
-    max-width: 1200px; /* Caps the width on the iPad Pro 12.9 */
-    margin: 0 auto; /* Centers the container horizontally */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 /* ====================================================================
