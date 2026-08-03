@@ -3,6 +3,7 @@
    ======================================================= */
 :root {
   --skep-border: 2px solid gray;
+  --skep-pos: fixed;
 }
 /* =======================================================
                         ROOT PROPERTIES END
@@ -74,14 +75,6 @@ body {
 body.dark-mode {
   background-color: #000000; /* Black background */
   color: #ffffff; /* White text */
-}
-
-/* Prevent horizontal scrolling */
-html,
-body {
-  overflow-x: hidden;
-  height: 100%;
-  margin: 0;
 }
 
 main {
@@ -343,20 +336,27 @@ nav {
   }
 
   nav {
-    background-color: rgba(0, 0, 0, 1); /* if you want tansparent, change the 1.0 value */
+    background-color: rgba(0, 0, 0, 0.6); /* if you want tansparent, change the 1.0 value */
     backdrop-filter: none; /* ← THIS removes the frosted bar */
-    position: fixed;
+    position: var(--skep-pos);
     padding: 0 0 60px 0; /* padding-bottom: 60px; applied */
     width: 100%;
     top: 0;
     left: 0;
     overflow: visible;
     border: none; /* ← In case a border is showing */
-    z-index: 1;
+    z-index: 3;
+  }
+
+  .mobile-nav-bg-color {
+    position: var(--skep-pos);
+    inset: 0 0 auto 0;
+    background-color: #000;
+    height: 60px;
   }
 
   .skep-logo {
-    position: fixed;
+    position: var(--skep-pos);
     left: 20px;
     top: 15px;
     z-index: 20;
@@ -368,22 +368,22 @@ nav {
   /* Show hamburger on mobile */
   .hamburger {
     display: block;
-    position: fixed;
+    position: var(--skep-pos);
     left: 0;
     right: 0;
     margin: 0 auto;
     top: 15px;
-    z-index: 20;
+    z-index: 3;
     cursor: pointer;
     width: 28px;
   }
 
   /* Keep dark mode button on right */
   .darkbutton {
-    position: fixed;
+    position: var(--skep-pos);
     right: 20px;
     top: 15px;
-    z-index: 20;
+    z-index: 3;
     background-color: rgb(255, 255, 255);
     color: #000;
     padding: 8px 16px;
@@ -394,29 +394,28 @@ nav {
 
   .navi.active {
     display: block;
-    position: fixed;
+    position: var(--skep-pos);
     top: 0px; /* pinned to top of viewport */
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 2;
+    z-index: 3;
     padding: 0;
   }
 
   /* Hide nav menu until hamburger is clicked */
   .navi ul {
-    display: none ;
+    display: none;
     flex-direction: column;
     gap: 5px;
     width: 100%;
     text-align: center;
-    z-index: 10;
-    padding:60px 0 5px 0; /*ALTERS MOBILE HAMBURGER LINK STRUCTURE*/
+    z-index: 3;
+    padding: 60px 0 5px 0; /*ALTERS MOBILE HAMBURGER LINK STRUCTURE*/
   }
 
   /* When menu is active (JS toggles .active) */
   .navi.active ul {
-    display: flex ;
+    display: flex;
   }
 
   .navi a {

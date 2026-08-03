@@ -132,4 +132,3 @@
 - **Configured .prettierrc:** 150 Char Consistent styling.
 - **Local Development Server:** Live Server (VS Code extension).
 
-
