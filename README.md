@@ -13,6 +13,9 @@
 🟦 Logo Class Renaming
 - Updated .logo → .skep-logo for naming consistency.
 
+🟦 Mobile Navigation Cleanup
+- Added `<div class="mobile-nav-bg-color">` to target media; hamburger's active nav.
+
 🟦 Navigation Cleanup
 - Removed unnecessary wrapper `<div>` elements.
 - Cleaned up `<nav>` structure and link lists.
