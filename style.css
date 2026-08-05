@@ -4,12 +4,12 @@
 :root {
   --skep-border: 2px solid gray;
   --skep-pos: fixed;
-  
+
   /*==============================================
                   BANNER CONTROLS
   ================================================*/
   --so-top: 50%; /*ONLY NEED TO CHANGE THIS FOR BOTH BANNER AND TEXT*/
-  --so-left: 50%; 
+  --so-left: 50%;
   --so-transform: -50%, -50%;
 }
 /* =======================================================
@@ -25,6 +25,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 /* =======================================================
                         GLOBAL PROPERTIES END
@@ -140,11 +141,12 @@ header {
    ============================ */
 
 nav {
+  display: flex;
+  flex-shrink: 0;
   background-color: rgba(0, 0, 0, 1); /* if you want tansparent, change the 1.0 value */
   color: #ffffff;
   padding: 15px 0; /* Vertical spacing */
   position: relative; /* IMPORTANT: anchors hamburger & dark button */
-  width: 100%;
   backdrop-filter: blur(5px); /* Frosted glass effect */
   z-index: 1;
   border-bottom: var(--skep-border);
@@ -158,14 +160,14 @@ nav {
 
 /* Desktop nav layout */
 .navi ul {
+  display: flex; /* Horizontal menu */
+  flex-shrink: 0;
+  justify-content: flex-start; /* Align left */
+  align-items: center;
   list-style: none; /* Remove bullets */
   padding: 0 0 0 80px; /* Horizontal spacing */
   margin: 0;
-  display: flex; /* Horizontal menu */
-  align-items: center;
   gap: 20px; /* Space between items */
-  justify-content: left; /* Align left */
-  flex-wrap: wrap; /* Wrap if needed */
   font-family: "Inter", sans-serif;
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -479,8 +481,8 @@ nav {
    ==================================================================== */
 @media screen and (min-width: 601px) and (max-width: 1366px) and (orientation: landscape) {
   nav {
-    width: 100%;
-    max-width: 1200px;
+    width: 100vw;
+    max-width: 1366px;
     margin: 0 auto;
     box-sizing: border-box;
     overflow-x: hidden;

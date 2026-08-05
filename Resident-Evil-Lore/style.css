@@ -290,7 +290,7 @@ section {
 @media screen and (min-width: 601px) and (max-width: 1366px) and (orientation: landscape) {
   nav {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1366px;
     margin: 0 auto;
     box-sizing: border-box;
     overflow-x: hidden;
