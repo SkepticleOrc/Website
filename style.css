@@ -4,6 +4,13 @@
 :root {
   --skep-border: 2px solid gray;
   --skep-pos: fixed;
+  
+  /*==============================================
+                  BANNER CONTROLS
+  ================================================*/
+  --so-top: 50%; /*ONLY NEED TO CHANGE THIS FOR BOTH BANNER AND TEXT*/
+  --so-left: 50%; 
+  --so-transform: -50%, -50%;
 }
 /* =======================================================
                         ROOT PROPERTIES END
@@ -23,6 +30,11 @@
                         GLOBAL PROPERTIES END
    ======================================================= */
 
+html,
+body {
+  touch-action: manipulation;
+}
+
 .skep-wallpaper-container {
   position: relative;
   height: 100vh;
@@ -37,27 +49,24 @@
   z-index: -1; /*PUTS WALLPAPER BEHIND BANNER*/
 }
 
+.skep-banner,
+.skep-h1 {
+  position: absolute; /*NEEDED TO MAKE IT POSITIONABLE*/
+  top: var(--so-top); /*CENTERED VERTICALLY*/
+  left: var(--so-left); /*CENTERED HORIZONTALLY*/
+  transform: translate(var(--so-transform)); /*CENTER THE ELEMENT*/
+  z-index: 0; /*PUTS BANNER OVER THE TOP OF WALLPAPER*/
+}
+
 .skep-banner {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 50px;
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 0; /*PUTS BANNER OVER THE TOP OF WALLPAPER*/
 }
 
 .skep-h1 {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   z-index: 1; /*BRINGS THE TEXT ABOVE THE BANNER*/
-}
-
-.skep-h1 h1 {
-  margin: 0;
   color: white;
 }
 

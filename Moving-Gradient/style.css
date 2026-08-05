@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  touch-action: manipulation;
+}
+
+body {
+  background-color: #2a272a;
+}
+
+/*===================================================
+                    MAIN NAV START
+===================================================*/
+/*NAV BAR CONTAINER*/
+.skep-main-nav {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  border-bottom: 2px solid #4b4a54;
+}
+
+.skep-main-nav-logo img {
+  width: 50px;
+  height: auto;
+}
+
+/*Nav LOGO POSITION*/
+.skep-nav-back-button {
+  display: flex;
+  position: absolute;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 10px;
+  width: 100%;
+}
+
+/*Nav LOGO POSITION*/
+.skep-nav-back-button img {
+  width: 40px;
+  height: auto;
+}
+/*===================================================
+                    MAIN NAV END
+===================================================*/
+
+/*===================================================
+                    OLD GRADIENT CODE START
+===================================================*/
+
+/*.gradient-nav1 {
+  display: flex;
+  justify-content: left;
+  align-items: top;
+  margin-top: 15px;
+  padding-left: 5px;
+  gap: 3px;
+  border: 1px solid white;
+}
+
+.gradient-pattern1 {
+  animation: gradient 1s ease infinite;
+  background-image: linear-gradient(135deg, #000080, #c2b067);
+  background-size: 400% 400%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.gradient-pattern2 {
+  animation: gradient 1s ease infinite;
+  background-image: linear-gradient(135deg, #e067a0, #5e5224);
+  background-size: 400% 400%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.gradient-pattern3 {
+  animation: gradient 1s ease infinite;
+  background-image: linear-gradient(135deg, #0b9635, #0e9c95);
+  background-size: 400% 400%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.gradient-nav2 {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  gap: 3px;
+  padding-left: 5px;
+  border: 1px solid white;
+}
+
+.gradient-pattern4 {
+  animation: gradient 1s ease infinite;
+  background-image: linear-gradient(135deg, #45acd4, #85168f);
+  background-size: 400% 400%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.gradient-pattern5 {
+  animation: gradient 1s ease infinite;
+  background-image: linear-gradient(135deg, #462799, #d4be63);
+  background-size: 400% 400%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.gradient-pattern6 {
+  animation: gradient 1s ease infinite;
+  background-image: linear-gradient(135deg, #44d844, #696d49);
+  background-size: 400% 400%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.gradient-nav3 {
+  display: flex;
+  justify-content: right;
+  align-items: top;
+  gap: 3px;
+  padding-left: 5px;
+  border: 1px solid white;
+}
+
+.gradient-pattern7 {
+  animation: gradient 1s ease infinite;
+  background-image: linear-gradient(135deg, #4f058b, #72683e);
+  background-size: 400% 400%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.gradient-pattern8 {
+  animation: gradient 1s ease infinite;
+  background-image: linear-gradient(135deg, #d64e18, #c7c0a3);
+  background-size: 400% 400%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.gradient-pattern9 {
+  animation: gradient 1s ease infinite;
+  background-image: linear-gradient(135deg, #c0bdbe, #131313);
+  background-size: 400% 400%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}*/
+
+/*===================================================
+                    OLD GRADIENT CODE END
+===================================================*/
+
+/*===================================================
+             GRADIENT ANIMATION MENU START
+            REFACTORED GRADIENT CODE START
+===================================================*/
+.gradient-nav1,
+.gradient-nav2,
+.gradient-nav3 {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  padding-left: 3px;
+  gap: 3px;
+  border: 1px solid white;
+}
+
+.gradient-nav1 {
+  justify-content: flex-start;
+}
+
+.gradient-nav2 {
+  justify-content: center;
+}
+
+.gradient-nav3 {
+  justify-content: flex-end;
+}
+
+.gradient-pattern1,
+.gradient-pattern2,
+.gradient-pattern3,
+.gradient-pattern4,
+.gradient-pattern5,
+.gradient-pattern6,
+.gradient-pattern7,
+.gradient-pattern8,
+.gradient-pattern9 {
+  animation: gradient 1s ease infinite;
+  background-size: 400% 400%;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.gradient-pattern1 {
+  background-image: linear-gradient(135deg, #000080, #c2b067);
+}
+.gradient-pattern2 {
+  background-image: linear-gradient(135deg, #e067a0, #5e5224);
+}
+.gradient-pattern3 {
+  background-image: linear-gradient(135deg, #0b9635, #0e9c95);
+}
+.gradient-pattern4 {
+  background-image: linear-gradient(135deg, #45acd4, #85168f);
+}
+.gradient-pattern5 {
+  background-image: linear-gradient(135deg, #462799, #d4be63);
+}
+.gradient-pattern6 {
+  background-image: linear-gradient(135deg, #44d844, #696d49);
+}
+.gradient-pattern7 {
+  background-image: linear-gradient(135deg, #4f058b, #72683e);
+}
+.gradient-pattern8 {
+  background-image: linear-gradient(135deg, #d64e18, #c7c0a3);
+}
+.gradient-pattern9 {
+  background-image: linear-gradient(135deg, #c0bdbe, #131313);
+}
+
+/*===================================================
+            REFACTORED GRADIENT CODE END
+===================================================*/
+
+@keyframes gradient {
+  0% {
+    background-position: 51% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 51% 0%;
+  }
+}
+
+/*===================================================            
+              GRADIENT ANIMATION MENU END
+===================================================*/

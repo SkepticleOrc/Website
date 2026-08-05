@@ -1,7 +1,7 @@
 :root {
   /*================================*/
   /*MAIN NAV ROOT VALUES*/
-  --skep-main-nav-border: 2px solid #bffcf9;
+  --skep-main-nav-border: 2px solid #4b4a54;
   /*================================*/
 
   /*================================*/
@@ -25,8 +25,13 @@
   padding: 0;
 }
 
+html,
 body {
-  background-color: black;
+  touch-action: manipulation;
+}
+
+body {
+  background-color: #2a272a;
 }
 
 /*------------------------------------------------------*/
@@ -36,24 +41,35 @@ body {
 /*NAV BAR CONTAINER*/
 .skep-main-nav {
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 201, 200, 0.8);
-  padding-left: 10px;
-  border-bottom: var(--skep-main-nav-border);
+  background-color: #000000;
+  color: white;
+  border-bottom: 2px solid #4b4a54;
 }
 
-.skep-nav-button {
-  position: absolute;
-  left: 10px;
-}
-
-/*Nav LOGO POSITION*/
-.skep-main-nav-logo img,
-.skep-nav-button img {
+.skep-main-nav-logo img {
   width: 50px;
   height: auto;
 }
+
+/*Nav LOGO POSITION*/
+.skep-nav-back-button {
+  display: flex;
+  position: absolute;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 10px;
+  width: 100%;
+}
+
+/*Nav LOGO POSITION*/
+.skep-nav-back-button img {
+  width: 40px;
+  height: auto;
+}
+
 /*------------------------------------------------------*/
 /*MAIN NAV SECTION END
 /*------------------------------------------------------*/

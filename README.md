@@ -1,137 +1,83 @@
-# 🔧 Full Codebase Change Log (HTML / CSS / JS)
-- Repository Opened: 24/07/2026
-- Repository Updated: 03/08/2026
-----------------------------------------------------------------
-## 📄 HTML Changes
+# SkepticleOrc Developer Portfolio
 
-🟦 Wallpaper System Migration
-- Replaced `<img class="Wallpaper">` with `<div class="skep-Wallpaper"></div>`.
-- Introduced .skep-wallpaper-container hero structure.
-- Removed ~10 lines of redundant HTML wrappers.
-- Added centered overlay elements: .skep-banner and .skep-h1.
+An authentic, responsive developer portfolio tracking my self-taught software engineering journey and my academic progress through the **Open University Q62 Computing & IT degree (Software Route)** starting October 2026.
 
-🟦 Logo Class Renaming
-- Updated .logo → .skep-logo for naming consistency.
+This project is built from scratch using raw HTML and custom CSS, completely avoiding templates or frameworks to ensure a total understanding of core browser rendering mechanics and fluid responsive layouts.
 
-🟦 Mobile Navigation Cleanup
-- Added `<div class="mobile-nav-bg-color">` to target media; hamburger's active nav.
+> **Note:** Formal changelog tracking began 24/07/2026 (see `CHANGELOG.md`). Earlier development, from the site's inception through late July, predates this log.
 
-🟦 Navigation Cleanup
-- Removed unnecessary wrapper `<div>` elements.
-- Cleaned up `<nav>` structure and link lists.
-- Updated directory links (e.g., designs.html → practice.html).
+## Recent Architecture Upgrades (27 July 2026 - 05 August 2026)
 
-🟦 Direct Class Assignment
-- Removed redundant `<div>` wrappers by applying classes directly to elements.
+- Major structural overhaul squashing lingering layout bugs.
+- Expanded the directory with clean, modular pages.
+- Removed several lines of unwanted HTML and CSS: achieved by removing unwanted div tags and adding the class directly into the element. Cleaned up around 10 lines of HTML and 15 lines of CSS.
+- Migrated primary development environment from Sublime Text to VS Code, adding Prettier for consistent code formatting.
 
-🟦 Directory Expansion
-- Added new pages: component-lab.html, study-log.html, privacy.html.
+For the full, detailed history of changes, see [`CHANGELOG.md`](./CHANGELOG.md).
 
-----------------------------------------------------------------
-# 🎨 CSS Changes
+### Key Layout & Technical Fixes
 
-🟩 Wallpaper Component Overhaul
-- Removed legacy .Wallpaper image rules.
-- Added new hero component CSS:
-- .skep-wallpaper-container
-- .skep-Wallpaper
-- .skep-banner
-- .skep-h1
+- **Navigation Flow Migration:** Shifted the main navigation bar from `position: fixed` to `position: relative` to bring it back into the vertical Flexbox stack. This resolved the 601px-1120px whitespace gap where the background image layout was clipping.
 
-🟩 Height Logic Correction
-- Replaced height: 100% with height: 100vh for full-screen hero behaviour.
+- **Component Positioning:** Isolated the website logo and the Dark Mode toggle using `position: absolute` within the parent header layout to keep them pinned consistently across screen resizes.
 
-🟩 Width Simplification
-- Removed redundant width: 100% from block-level containers.
+- **Desktop Layout Correction:** Kept the desktop `nav` at `position: relative`, ensuring it remains in normal document flow. This resolved an issue where the Wallpaper image was rendering underneath the nav bar, since content now automatically pushes below the nav rather than needing manual offsets.
 
-🟩 Removal of All !important Rules
-- Layout now behaves naturally without forced overrides.
+- **Mobile Navigation Fix:** Shifted the mobile `nav` from `position: relative` to `position: fixed` (with `top: 0; left: 0;`), keeping the black nav bar visible and pinned in place while scrolling instead of disappearing off-screen. Added matching `padding-top` to `main` to stop content rendering underneath the now-fixed bar.
 
-🟩 Root Variables Introduced
-- :root { --skep-border: 2px solid gray; }
+- **Menu Overlap Fix:** Diagnosed a redundant `margin-top: 60px` on the mobile dropdown menu (`.navi ul`), left over from before the header reserved its own fixed height. Set it to `0`, resolving an unwanted whitespace gap that only appeared when the mobile menu was open.
 
-🟩 Navigation Bar Improvements
-- Desktop nav remains in normal flow (position: relative).
-- Mobile nav now uses position: fixed with proper padding offsets.
-- Removed leftover margin-top from mobile dropdown.
+- **Responsive Card Justification:** Created the `.origins-content` wrapper for main text content, restricting it to a maximum reading width of `750px` on desktop, scaling to `650px` on tablets, and dropping limits on mobile. Implemented `text-align: justify` combined with mobile-safe `text-justify: inter-word` to ensure crisp, clean layout edges on small touchscreens.
 
-🟩 Logo & Dark Mode Button Positioning
-- Both now use position: absolute inside the header for consistent placement.
+- **Menu Architecture Clean-up:** Ripped out legacy placeholder sections ("Learn" and "Practice") from the mobile layout overlay. Replaced them with dedicated, distinct tracking columns.
 
-🟩 Footer Border Upgrade
-- Footer now uses border-top: var(--skep-border).
+---
 
-🟩 Mobile Layout Fixes
-- Cleaned spacing and padding.
-- Fixed overlay stacking (z-index upgrades).
-- Ensured hero section renders correctly under fixed nav.
+## Repository Directory
 
-🟩 Wallpaper Component
-- Background layer uses inset: 0 instead of four separate positioning rules.
-- Z-index layering: - Wallpaper: 0 - Banner: 1 - Title: 2
-- Removed redundant width definitions.
+The application structure has been modularized into separate, dedicated files to keep codebases manageable, easy to navigate, and clean for version control updates.
 
-🟩 Legacy CSS Removal
-- Removed ~15 lines of outdated CSS.
+### 1. Index / Navigation Hub (`index.html`)
 
-----------------------------------------------------------------
-# ⚙️ JavaScript Changes
+The main gateway of the site utilizing an animated mobile menu overlay and custom JavaScript state management to toggle fluid dark mode themes.
 
-🟫 Mobile Menu State Management
-- Improved JS toggle logic for mobile menu overlay.
-- Ensures menu opens and closes cleanly without leftover spacing.
+### 2. About Me / SkepticleOrc Origins (`about.html`)
 
-🟫 Dark Mode Toggle Stability
-- JS now interacts correctly with the repositioned .skep-logo and .dark-mode-btn.
-- No more layout jumps when toggling themes.
+A deeply personal, honest narrative bridging my background in high-pressure public services (Security and Prison Services) to my lifelong 19-year curiosity for digital building. It details my evolution from writing basic text layouts in Windows Notepad at age 16, to modding video games, and launching a live project on Roblox.
 
-🟫 Navigation Behaviour
-- JS now respects the fixed mobile nav height.
-- Prevents content from sliding underneath the bar.
-  
-🟫 Component Lab Integration
-- JS prepared for isolated UI components (sliders, modals, toggles).
-- Ensures each component behaves independently without global conflicts.
+### 3. Component Lab (`component-lab.html`) *[NEW]*
 
-----------------------------------------------------------------
-# 🏁 Summary of All Changes 27
+A dedicated interface sandbox showcasing independent UI engineering components built from scratch (such as mobile menu toggles, layout sliders, or standalone modal boxes). It isolates my daily practice pieces from full-scale projects.
 
-- Wallpaper system replaced
-- HTML structure cleaned
-- Redundant wrappers removed
-- !important removed
-- Width rules simplified
-- Height logic corrected
-- Mobile nav fixed
-- Hero component added
-- Root variables added
-- Footer cleaned
-- Navigation improved
-- Responsiveness improved
-- Legacy CSS removed
-- Z-index layering corrected
-- Modern shorthand adopted
-- Code weight reduced
-- Maintainability improved
-- Readability improved
-- Scalability improved
-- JS menu logic stabilised
-- JS dark mode behaviour improved
-- JS component lab prepared
-----------------------------------------------------------------
-# 🎨 Tech Stack & Tools
+### 4. Study Log (`study-log.html`) *[NEW]*
 
-- **Languages:** Semantic HTML5, Vanilla CSS3 & Javascript.
-- **Debugging & Inspecting:** Google Chrome Developer Tools.
-- **Version Control:** Git & GitHub Pages deployment pipeline.
-- **W3 Schools** - https://www.w3schools.com/ HTML, CSS, & JS.
-- **CSS Tricks** - https://css-tricks.com/ Design layouts.
-- **MDN** - https://developer.mozilla.org/en-US/ Developer hub.
-- **MJS** - https://javascript.info/ Modern Javascrtipt.
-- **Caniuse** - https://caniuse.com/ Element checker.
-- **Claude AI** - https://claude.ai/ Used to help debug.
-- **ColorSpace** - https://mycolor.space/ Color matching.
-- **Code Formatting:** Prettier (VS Code extension). 
-- **Configured .prettierrc:** 150 Char Consistent styling.
-- **Local Development Server:** Live Server (VS Code extension).
+An interactive chronological archive built natively using HTML `<details>` and `<summary>` components. This file tracks my self-taught frontend breakthroughs over the summer and will serve as my primary lecture and puzzle notes log for upcoming Stage 2 modules like **Object-Oriented Java (M250)** and **Algorithms (M269)**.
 
+### 5. Privacy Policy (`privacy.html`) *[NEW]*
+
+A defensive data page detailing my commitment to web safety. This website deliberately implements zero analytical trackers and relies on invisible third-party form endpoints to process communication, keeping personal contact emails 100% hidden from automated database scrapers.
+
+---
+
+## Current Academic & Career Strategy
+
+- **Target:** To work relentlessly through the Open University curriculum to achieve a **First-Class Honours degree (1st)**.
+
+- **Method:** Capitalize on the lower grade-pressure of Stage 1 modules to build deep side-projects under the **SkepticleOrc** studio banner, ensuring a substantial practical head start before Stage 2 and Stage 3 scaling algorithms kick in.
+
+---
+
+## Tech Stack & Tools
+
+- **Languages:** Semantic HTML5, Vanilla CSS3 (Custom Media Queries, Flexbox), Basic JavaScript State Management
+- **Debugging & Inspecting:** Google Chrome Developer Tools
+- **Version Control:** Git & GitHub Pages deployment pipeline
+- **[W3Schools](https://www.w3schools.com/)** - Used for HTML, CSS, & JavaScript.
+- **[CSS Tricks](https://css-tricks.com/)** - Used to help with design layouts.
+- **[MDN](https://developer.mozilla.org/en-US/)** - Used as a main developer hub.
+- **[javascript.info](https://javascript.info/)** - Used for modern JavaScript concepts.
+- **[Caniuse](https://caniuse.com/)** - Used to check what elements work in which browsers.
+- **[Claude AI](https://claude.ai/)** - Used to help code and debug CSS currently, will use with JavaScript eventually.
+- **[ColorSpace](https://mycolor.space/)** - Used to color match themes and website styles.
+- **Code Formatting:** Prettier (VS Code extension), configured via `.prettierrc` for consistent style across the project.
+- **Local Development Server:** Live Server (VS Code extension), providing instant auto-refresh on save for faster local testing.
