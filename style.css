@@ -25,16 +25,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 /* =======================================================
                         GLOBAL PROPERTIES END
    ======================================================= */
-
-html,
-body {
-  touch-action: manipulation;
-}
 
 .skep-wallpaper-container {
   position: relative;
@@ -79,7 +73,6 @@ body {
   display: flex; /* Allows footer to stick to bottom */
   flex-direction: column; /* Stack content vertically */
   min-height: 100dvh; /* Full viewport height, mobile-safe */
-  touch-action: pan-x pan-y; /*Stops pinch - zoom on safari misaligning content*/
 }
 
 /* Dark mode (activated when JS adds .dark-mode) */
@@ -475,19 +468,4 @@ nav {
 
 /* ====================================================================
                             MOBILE SECTION (END)
-   ==================================================================== */
-/* ====================================================================
-                            TABLET SECTION (START)
-   ==================================================================== */
-@media screen and (min-width: 601px) and (max-width: 1366px) and (orientation: landscape) {
-  nav {
-    width: 100%;
-    max-width: 1366px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
-}
-/* ====================================================================
-                            TABLET SECTION (END)
    ==================================================================== */
